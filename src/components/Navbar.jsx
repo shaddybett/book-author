@@ -70,7 +70,7 @@ function Navbar() {
 
   // Track active section
   useEffect(() => {
-    const sections = ['about', 'projects', 'experience', 'contact']
+    const sections = ['about', 'books', 'genres', 'contact']
     
     const handleScroll = () => {
       const currentSection = sections.find(section => {
@@ -106,15 +106,15 @@ function Navbar() {
 
   const navItems = [
     { id: 'about', label: 'About' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'books', label: 'Books' },
+    { id: 'genres', label: 'Genres' },
     { id: 'contact', label: 'Contact' }
   ]
 
   const socialLinks = [
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/sbett/", label: "LinkedIn" },
-    { icon: FaGithub, href: "https://github.com/shaddybett", label: "GitHub" },
-    { icon: FaSquareXTwitter, href: "https://x.com/ShadrackBe32546", label: "Twitter" }
+    { icon: FaSquareXTwitter, href: "https://twitter.com/author", label: "Twitter" },
+    { icon: FaInstagram, href: "https://instagram.com/author", label: "Instagram" },
+    { icon: FaLinkedin, href: "https://linkedin.com/in/author", label: "LinkedIn" }
   ]
 
   return (
@@ -152,7 +152,7 @@ function Navbar() {
                 className="relative mx-2 transition-transform duration-200 group-hover:brightness-110" 
                 width={50} 
                 height={33} 
-                alt="Shadrack Bett Logo"
+                alt="Author Logo"
               />
             </button>
           </motion.div>

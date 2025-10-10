@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { EXPERIENCES } from "../constants"
-import { FiCalendar, FiMapPin } from "react-icons/fi"
+import { AUTHOR_BIO } from "../constants"
+import { FiCalendar, FiMapPin, FiAward, FiBook } from "react-icons/fi"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,9 +46,9 @@ const timelineVariants = {
   }
 }
 
-const Experience = () => {
+const About = () => {
   return (
-    <div id="experience" className="mt-16">
+    <div id="about" className="mt-16">
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -60,10 +60,10 @@ const Experience = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight
                      bg-gradient-to-r from-white via-stone-200 to-stone-400 
                      bg-clip-text text-transparent mb-4">
-          Experience
+          About Me
         </h2>
         <p className="text-stone-400 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
-          My professional journey and the impactful projects I've contributed to
+          My journey as a writer and the experiences that have shaped my storytelling
         </p>
       </motion.div>
 
@@ -87,7 +87,7 @@ const Experience = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="space-y-12 lg:space-y-16"
         >
-          {EXPERIENCES.map((experience, index) => (
+          {AUTHOR_BIO.map((bio, index) => (
             <motion.div
               key={index}
               variants={experienceVariants}
@@ -122,13 +122,13 @@ const Experience = () => {
                       <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
                         <FiCalendar className="text-stone-400 text-sm" />
                         <span className="text-stone-300 font-medium text-sm">
-                          {experience.year}
+                          {bio.year}
                         </span>
                       </div>
                       <div className="flex items-center justify-center lg:justify-start gap-2">
                         <FiMapPin className="text-stone-400 text-sm" />
                         <span className="text-stone-400 text-sm">
-                          {experience.company}
+                          {bio.company}
                         </span>
                       </div>
                     </div>
@@ -151,38 +151,39 @@ const Experience = () => {
                     <h3 className="text-xl lg:text-2xl font-bold tracking-tight
                                  bg-gradient-to-r from-white to-stone-300 
                                  bg-clip-text text-transparent mb-3">
-                      {experience.role}
+                      {bio.role}
                     </h3>
 
                     {/* Company */}
                     <div className="mb-4">
                       <span className="text-stone-400 font-medium">
-                        {experience.company}
+                        {bio.company}
                       </span>
                     </div>
 
                     {/* Description */}
                     <div className="mb-6">
                       <p className="text-stone-300 leading-relaxed text-base lg:text-lg">
-                        {experience.description}
+                        {bio.description}
                       </p>
                     </div>
 
-                    {/* Technologies */}
+                    {/* Achievements */}
                     <div className="space-y-3">
-                      <h4 className="text-stone-400 font-medium text-sm uppercase tracking-wider">
-                        Technologies Used
+                      <h4 className="text-stone-400 font-medium text-sm uppercase tracking-wider flex items-center gap-2">
+                        <FiAward className="w-4 h-4" />
+                        Key Achievements
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {experience.technologies.map((tech, techIndex) => (
+                        {bio.achievements.map((achievement, achievementIndex) => (
                           <motion.span
-                            key={techIndex}
+                            key={achievementIndex}
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ 
                               duration: 0.3, 
-                              delay: techIndex * 0.05,
+                              delay: achievementIndex * 0.05,
                               ease: "easeOut"
                             }}
                             whileHover={{ 
@@ -194,9 +195,10 @@ const Experience = () => {
                                      text-stone-200 hover:text-white
                                      px-3 py-1.5 rounded-full text-sm font-medium
                                      transition-all duration-200 cursor-default
-                                     backdrop-blur-sm"
+                                     backdrop-blur-sm flex items-center gap-2"
                           >
-                            {tech}
+                            <FiBook className="w-3 h-3" />
+                            {achievement}
                           </motion.span>
                         ))}
                       </div>
@@ -223,4 +225,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default About
