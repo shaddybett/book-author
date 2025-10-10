@@ -127,14 +127,7 @@ export const AUTHOR_BIO = [
     company: "Writers Workshop & MFA Program",
     description: `Led transformative creative writing workshops and mentored over 200 aspiring authors. Developed innovative storytelling techniques that helped students discover their authentic voice. Published essays on the craft of writing in literary journals.`,
     achievements: ["MFA in Creative Writing", "200+ Students Mentored", "Teaching Excellence Award", "Published Essays"],
-  },
-  {
-    year: "2010 – 2015",
-    role: "Freelance Writer & Editor",
-    company: "Literary Magazines & Publishers",
-    description: `Built foundation as a storyteller through short fiction, essays, and editorial work. Contributed to acclaimed literary magazines and helped shape emerging voices as a developmental editor. Won the Emerging Writer Award for short fiction.`,
-    achievements: ["Emerging Writer Award", "25+ Published Stories", "Editorial Consultant", "Writing Community Builder"],
-  },
+  }
 ];
 
 export const BOOKS = [
@@ -145,7 +138,7 @@ export const BOOKS = [
       "In a forest where trees hold ancient memories, seventeen-year-old Aria discovers she can hear their whispers—and they're warning of a coming darkness. A spellbinding fantasy about the power of nature, the weight of legacy, and finding courage when the world needs it most.",
     genre: "Fantasy Fiction",
     price: "$16.99",
-    purchaseLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.com%2FNavigating-Foreign-Land-Identity-Belonging%2Fdp%2FB0FMSZDSM2%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExU2ZZQVBZRko4am1nZm5NYgEedummF6OHCMClThPIdmXv6iY1cGQCcCCvxmQv3_oOi4U6ijTBm2OLKq3MGI8_aem_Y88F4p7iCd49MawpBmGIug&h=AT3wAysgA3-gRi5WTTI5TebCnf4-fqm338XLSjjj3wjZBdRzqUJ1Y6NP_QVy5tpZ-xNWdoW26Hf84fY3CUPhAqtP7HXi4r_gfut7lj093E7i0wFT3y4nHscEtPJEuA",
+    purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567890",
     publishedYear: "2023",
     rating: 4.8,
@@ -160,7 +153,7 @@ export const BOOKS = [
       "When physicist Maya Chen creates a device that receives messages from the future, she discovers humanity's fate hangs by a thread—and she has only seven days to change it. A mind-bending science fiction thriller exploring free will, sacrifice, and the butterfly effect of choice.",
     genre: "Science Fiction",
     price: "$18.99",
-    purchaseLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.com%2FNavigating-Foreign-Land-Identity-Belonging%2Fdp%2FB0FMSZDSM2%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExU2ZZQVBZRko4am1nZm5NYgEedummF6OHCMClThPIdmXv6iY1cGQCcCCvxmQv3_oOi4U6ijTBm2OLKq3MGI8_aem_Y88F4p7iCd49MawpBmGIug&h=AT3wAysgA3-gRi5WTTI5TebCnf4-fqm338XLSjjj3wjZBdRzqUJ1Y6NP_QVy5tpZ-xNWdoW26Hf84fY3CUPhAqtP7HXi4r_gfut7lj093E7i0wFT3y4nHscEtPJEuA",
+    purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567891",
     publishedYear: "2022",
     rating: 4.9,
@@ -175,7 +168,7 @@ export const BOOKS = [
       "After finding her grandmother's unsent letters spanning 50 years, Emma embarks on a journey across three continents to deliver them—and discovers family secrets that will reshape her understanding of love, sacrifice, and forgiveness. A deeply moving contemporary novel.",
     genre: "Contemporary Fiction",
     price: "$15.99",
-    purchaseLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.com%2FNavigating-Foreign-Land-Identity-Belonging%2Fdp%2FB0FMSZDSM2%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExU2ZZQVBZRko4am1nZm5NYgEedummF6OHCMClThPIdmXv6iY1cGQCcCCvxmQv3_oOi4U6ijTBm2OLKq3MGI8_aem_Y88F4p7iCd49MawpBmGIug&h=AT3wAysgA3-gRi5WTTI5TebCnf4-fqm338XLSjjj3wjZBdRzqUJ1Y6NP_QVy5tpZ-xNWdoW26Hf84fY3CUPhAqtP7HXi4r_gfut7lj093E7i0wFT3y4nHscEtPJEuA",
+    purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567892",
     publishedYear: "2021",
     rating: 4.7,
@@ -190,7 +183,7 @@ export const BOOKS = [
       "Detective Sarah Chen thought she'd seen every kind of criminal—until people start losing decades of memories overnight. As she races to catch a thief who steals the most precious thing we own, she must confront which memories define us and which ones we're better off losing.",
     genre: "Mystery Thriller",
     price: "$17.99",
-    purchaseLink: "https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.amazon.com%2FNavigating-Foreign-Land-Identity-Belonging%2Fdp%2FB0FMSZDSM2%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExU2ZZQVBZRko4am1nZm5NYgEedummF6OHCMClThPIdmXv6iY1cGQCcCCvxmQv3_oOi4U6ijTBm2OLKq3MGI8_aem_Y88F4p7iCd49MawpBmGIug&h=AT3wAysgA3-gRi5WTTI5TebCnf4-fqm338XLSjjj3wjZBdRzqUJ1Y6NP_QVy5tpZ-xNWdoW26Hf84fY3CUPhAqtP7HXi4r_gfut7lj093E7i0wFT3y4nHscEtPJEuA",
+    purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567893",
     publishedYear: "2020",
     rating: 4.6,
