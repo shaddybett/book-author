@@ -127,14 +127,7 @@ export const AUTHOR_BIO = [
     company: "Writers Workshop & MFA Program",
     description: `Led transformative creative writing workshops and mentored over 200 aspiring authors. Developed innovative storytelling techniques that helped students discover their authentic voice. Published essays on the craft of writing in literary journals.`,
     achievements: ["MFA in Creative Writing", "200+ Students Mentored", "Teaching Excellence Award", "Published Essays"],
-  },
-  {
-    year: "2010 – 2015",
-    role: "Freelance Writer & Editor",
-    company: "Literary Magazines & Publishers",
-    description: `Built foundation as a storyteller through short fiction, essays, and editorial work. Contributed to acclaimed literary magazines and helped shape emerging voices as a developmental editor. Won the Emerging Writer Award for short fiction.`,
-    achievements: ["Emerging Writer Award", "25+ Published Stories", "Editorial Consultant", "Writing Community Builder"],
-  },
+  }
 ];
 
 export const BOOKS = [
