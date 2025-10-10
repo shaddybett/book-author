@@ -81,7 +81,7 @@ function Hero() {
   ]
 
   return (
-    <div id="about" className='pt-24 pb-4 lg:mb-36'>
+    <div id="hero" className='pt-24 pb-4 lg:mb-36'>
       <div className='flex flex-wrap lg:flex-row-reverse w-full'>
         {/* Image Section */}
         <div className='w-full lg:w-1/2'>
