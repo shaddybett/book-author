@@ -68,30 +68,23 @@
 
 
 
-import { BiLogoPostgresql } from "react-icons/bi"
-import { RiReactjsLine } from "react-icons/ri"
-import { SiJavascript, SiFlask, SiTailwindcss, SiHtml5, SiCss3, SiGit, SiGithub } from "react-icons/si"
-import { FaNodeJs, FaPython } from "react-icons/fa"
+import { FiBook, FiStar, FiHeart, FiZap, FiShield, FiGlobe, FiUsers } from "react-icons/fi"
 import { motion } from "framer-motion"
+import { WRITING_GENRES } from "../constants"
 
-const techStack = [
-  { Icon: FaPython, name: "Python" },
-  { Icon: SiJavascript, name: "JavaScript" },
-  { Icon: RiReactjsLine, name: "React" },
-  { Icon: SiFlask, name: "Flask" },
-  { Icon: FaNodeJs, name: "Node.js" },
-  { Icon: BiLogoPostgresql, name: "PostgreSQL" },
-  { Icon: SiTailwindcss, name: "Tailwind" },
-  { Icon: SiGit, name: "Git" },
-  { Icon: SiGithub, name: "GitHub" },
-  { Icon: SiHtml5, name: "HTML5" },
-  { Icon: SiCss3, name: "CSS3" }
+const genreIcons = [
+  FiBook, FiStar, FiHeart, FiZap, FiShield, FiGlobe, FiUsers
 ]
 
-// Duplicate for seamless loop
-const duplicatedTechStack = [...techStack, ...techStack]
+const genreStack = WRITING_GENRES.map((genre, index) => ({
+  Icon: genreIcons[index % genreIcons.length],
+  name: genre
+}))
 
-function Technologies() {
+// Duplicate for seamless loop
+const duplicatedGenreStack = [...genreStack, ...genreStack]
+
+function WritingGenres() {
   return (
     <div className="mt-16 pb-16 overflow-hidden">
       <motion.div
@@ -104,10 +97,10 @@ function Technologies() {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight
                      bg-gradient-to-r from-white via-stone-200 to-stone-400 
                      bg-clip-text text-transparent mb-4">
-          Technologies
+          Writing Genres
         </h2>
         <p className="text-stone-400 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
-          Tools and technologies I use to build exceptional digital experiences
+          The diverse literary genres I explore in my storytelling journey
         </p>
       </motion.div>
 
@@ -131,7 +124,7 @@ function Technologies() {
             className="flex gap-6 py-8"
             style={{ width: "fit-content" }}
           >
-            {duplicatedTechStack.map(({ Icon, name }, index) => (
+            {duplicatedGenreStack.map(({ Icon, name }, index) => (
               <motion.div
                 key={index}
                 whileHover={{ 
@@ -165,7 +158,7 @@ function Technologies() {
       {/* Mobile Grid - Static */}
       <div className="sm:hidden">
         <div className="grid grid-cols-2 gap-4 px-4 max-w-sm mx-auto">
-          {techStack.map(({ Icon, name }, index) => (
+          {genreStack.map(({ Icon, name }, index) => (
             <motion.div
               key={name}
               initial={{ opacity: 0, y: 20 }}
@@ -209,4 +202,4 @@ function Technologies() {
   )
 }
 
-export default Technologies
+export default WritingGenres

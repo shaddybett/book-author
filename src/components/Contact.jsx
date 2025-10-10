@@ -1,14 +1,16 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp, FiHeart, FiCode, FiCoffee } from 'react-icons/fi';
+import { FiInstagram, FiTwitter, FiMail, FiArrowUp, FiHeart, FiBook, FiCoffee, FiFacebook } from 'react-icons/fi';
+import { CONTACT } from '../constants';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: FiGithub, href: "https://github.com/shaddybett", label: "GitHub" },
-    { icon: FiLinkedin, href: "https://www.linkedin.com/in/sbett/", label: "LinkedIn" },
-    { icon: FiTwitter, href: "https://x.com/ShadrackBe32546", label: "Twitter" },
-    { icon: FiMail, href: "mailto:shadrack.bett.92@gmail.com", label: "Email" }
+    { icon: FiTwitter, href: CONTACT.socialMedia.twitter, label: "Twitter" },
+    { icon: FiInstagram, href: CONTACT.socialMedia.instagram, label: "Instagram" },
+    { icon: FiFacebook, href: CONTACT.socialMedia.facebook, label: "Facebook" },
+    { icon: FiBook, href: CONTACT.socialMedia.goodreads, label: "Goodreads" },
+    { icon: FiMail, href: `mailto:${CONTACT.email}`, label: "Email" }
   ];
 
   const scrollToTop = () => {
@@ -47,11 +49,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-white via-stone-200 to-stone-400 
                          bg-clip-text text-transparent mb-4">
-              Shadrack Bett
+              Mercy Bett
             </h3>
             <p className="text-stone-400 leading-relaxed mb-6">
-              Full-stack developer passionate about creating beautiful, functional, 
-              and user-centered digital experiences.
+              Award-winning author passionate about crafting compelling narratives 
+              that transport readers to new worlds and touch their hearts.
             </p>
             
             {/* Social links */}
@@ -77,8 +79,8 @@ const Footer = () => {
             <div className="space-y-3">
               {[
                 { name: 'About', id: 'about' },
-                { name: 'Projects', id: 'projects' },
-                { name: 'Experience', id: 'experience' },
+                { name: 'Books', id: 'books' },
+                { name: 'Genres', id: 'genres' },
                 { name: 'Contact', id: 'contact' }
               ].map((link, index) => (
                 <button
@@ -98,17 +100,25 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-6 text-lg">Let's Connect</h4>
             <div className="space-y-4">
               <p className="text-stone-400">
-                Always open to discussing new opportunities and exciting projects.
+                Always open to discussing book collaborations, speaking engagements, and literary opportunities.
               </p>
+              <div className="space-y-3">
+                <div className="text-stone-300 text-sm">
+                  <strong>Email:</strong> {CONTACT.email}
+                </div>
+                <div className="text-stone-300 text-sm">
+                  <strong>Location:</strong> {CONTACT.address}
+                </div>
+              </div>
               <a
-                href="mailto:shadrack.bett.92@gmail.com"
+                href={`mailto:${CONTACT.email}`}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-stone-700 to-stone-600
                          px-6 py-3 rounded-xl text-white font-medium
                          hover:from-stone-600 hover:to-stone-500
                          transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <FiMail className="text-lg" />
-                Get In Touch
+                Contact Me
               </a>
             </div>
           </div>
@@ -120,17 +130,17 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6 text-stone-400 text-sm">
-            <span>© {currentYear} Shadrack Bett</span>
+            <span>© {currentYear} Mercy Bett</span>
             <span className="hidden md:block">•</span>
             <span className="hidden sm:flex items-center gap-1">
-              Crafted with passion and precision <FiHeart className="text-red-400 text-xs" />
+              Stories crafted with passion and imagination <FiHeart className="text-red-400 text-xs" />
             </span>
           </div>
           
           <div className="flex items-center gap-4 text-stone-500 text-xs">
             <span className="flex items-center gap-1">
-              <FiCode className="text-sm" />
-              React • Tailwind • Framer Motion
+              <FiBook className="text-sm" />
+              Author Website • Literary Portfolio
             </span>
           </div>
         </div>
