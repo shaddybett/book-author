@@ -211,7 +211,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                          shadow-lg hover:shadow-xl flex items-center gap-2 font-semibold"
               >
                 <FiExternalLink className="w-5 h-5" />
-                <span>Buy Now</span>
+                <span>Order Now</span>
               </motion.a>
             </div>
           </div>

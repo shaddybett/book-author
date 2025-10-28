@@ -155,7 +155,7 @@ function Hero() {
                       bg-clip-text text-transparent
                       leading-tight'
             >
-              Mercy Bett
+              Mercy Langat
             </motion.h1>
             
             <motion.span
