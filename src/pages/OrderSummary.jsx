@@ -273,7 +273,7 @@ Please send me delivery details.`
                   <button
                     type="submit"
                     className="w-full mt-6 bg-white hover:bg-stone-100 text-stone-800 
-                             px-8 py-4 rounded-full font-semibold text-lg
+                             px-4 py-4 rounded-full font-semibold text-lg
                              transition-all duration-200 shadow-lg hover:shadow-xl"
                   >
                     Continue to Payment
