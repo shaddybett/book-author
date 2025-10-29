@@ -181,7 +181,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                         border border-stone-700/40 backdrop-blur-sm
                         group-hover:border-stone-600/60 transition-all duration-500
                         hover:shadow-2xl hover:shadow-stone-900/30
-                        aspect-[3/4] max-w-sm mx-auto">
+                        aspect-[2/3] max-w-sm mx-auto">
             
             <img
               src={book.image}
@@ -192,7 +192,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
             />
             
             {/* Awards badge */}
-            {book.awards && book.awards.length > 0 && (
+            {/* {book.awards && book.awards.length > 0 && (
               <div className="absolute top-4 left-4 bg-gradient-to-br from-yellow-400 to-yellow-600
                             px-3 py-2 rounded-lg shadow-lg z-20">
                 <div className="flex items-center gap-1">
@@ -200,7 +200,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                   <span className="text-yellow-900 font-bold text-xs">Award Winner</span>
                 </div>
               </div>
-            )}
+            )} */}
             
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
