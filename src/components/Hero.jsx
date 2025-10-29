@@ -98,7 +98,7 @@ function Hero() {
               
               <motion.img
                 src={authorPic}
-                alt='Mercy Bett - Award-Winning Author'
+                alt='Mercy Langat - Award-Winning Author'
                 className='relative border-2 border-stone-700/50 rounded-3xl 
                         w-72 h-72 
                         sm:w-96 sm:h-96 

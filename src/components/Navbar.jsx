@@ -107,7 +107,7 @@ function Navbar() {
                   className={`relative transition-all duration-300 group-hover:brightness-110 
                            ${isScrolled ? 'w-14 h-14' : 'w-16 h-16'}
                            rounded-xl object-cover`}
-                  alt="Mercy Bett Logo"
+                  alt="Mercy Langat Logo"
                 />
               </div>
               
@@ -115,7 +115,7 @@ function Navbar() {
               {/* <div className="hidden sm:block">
                 <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white via-stone-200 to-stone-400 
                              bg-clip-text text-transparent tracking-tight">
-                  Mercy Bett
+                  Mercy Langat
                 </h1>
                 <p className="text-xs text-stone-400 tracking-wide">Award-Winning Author</p>
               </div> */}

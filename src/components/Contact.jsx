@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-white via-stone-200 to-stone-400 
                          bg-clip-text text-transparent mb-4">
-              Mercy Bett
+              Mercy Langat
             </h3>
             <p className="text-stone-400 leading-relaxed mb-6">
               Award-winning author passionate about crafting compelling narratives 
@@ -147,7 +147,7 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6 text-stone-400 text-sm">
-            <span>© {currentYear} Mercy Bett</span>
+            <span>© {currentYear} Mercy Langat</span>
             <span className="hidden md:block">•</span>
             <span className="hidden sm:flex items-center gap-1">
               Stories crafted with passion and imagination <FiHeart className="text-red-400 text-xs" />

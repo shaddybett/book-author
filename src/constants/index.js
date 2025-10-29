@@ -59,7 +59,7 @@ export const BOOKS = [
     description:
       "A deeply personal and inspiring memoir taking readers on a transformative journey from the hills of Kenya to the cold streets of Canada. With raw honesty and quiet strength, Mercy shares her story of immigration, culture shock, motherhood, and resilience. More than geographical relocation, it's about the emotional landscapes we traverse when we leave home in search of security, identity, and purpose.",
     genre: "Memoir & Biography",
-    price: "$600",
+    price: "600",
     purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "B0FMSZDSM2",
     publishedYear: "2024",
@@ -74,7 +74,7 @@ export const BOOKS = [
     description:
       "Is marriage really a scam? This powerful book takes readers on a heartfelt journey through the truth about love, commitment, and the realities that come after saying 'I do.' Blending real-life experiences with compelling stories, it opens the curtain on what truly happens when romance meets responsibility. Behind the Vows explores the beauty and battles of marriage, challenging myths and offering hope to anyone questioning whether true love still exists.",
     genre: "Relationships & Self-Help",
-    price: "$500",
+    price: "500",
     purchaseLink: "https://www.amazon.com/Behind-Vows-Marriage-Really-Scam/dp/B0EXAMPLE",
     isbn: "B0EXAMPLE",
     publishedYear: "2024",
