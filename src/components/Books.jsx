@@ -294,7 +294,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                 <span>{book.publishedYear}</span>
               </div>
               <div className="flex items-center gap-2">
-                <FiDollarSign className="w-4 h-4" />
+                <span className="font-semibold">Ksh</span>
                 <span className="text-white font-semibold">{book.price}</span>
               </div>
             </div>
