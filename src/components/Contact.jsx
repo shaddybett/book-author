@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiInstagram, FiTwitter, FiMail, FiArrowUp, FiHeart, FiBook, FiCoffee, FiFacebook } from 'react-icons/fi';
+import { FiInstagram, FiTwitter, FiMail, FiArrowUp, FiHeart, FiBook, FiCoffee, FiFacebook, FiMessageCircle } from 'react-icons/fi';
 import { CONTACT } from '../constants';
 
 const Footer = () => {
@@ -107,19 +107,36 @@ const Footer = () => {
                   <strong>Email:</strong> {CONTACT.email}
                 </div>
                 <div className="text-stone-300 text-sm">
+                  <strong>WhatsApp:</strong> +1 (905) 347-3564
+                </div>
+                <div className="text-stone-300 text-sm">
                   <strong>Location:</strong> {CONTACT.address}
                 </div>
               </div>
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-stone-700 to-stone-600
-                         px-6 py-3 rounded-xl text-white font-medium
-                         hover:from-stone-600 hover:to-stone-500
-                         transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <FiMail className="text-lg" />
-                Contact Me
-              </a>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-stone-700 to-stone-600
+                           px-6 py-3 rounded-xl text-white font-medium
+                           hover:from-stone-600 hover:to-stone-500
+                           transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <FiMail className="text-lg" />
+                  Email Me
+                </a>
+                <a
+                  href="https://wa.me/19053473564?text=Hi%20Mercy!%20I'd%20like%20to%20discuss%20your%20books%20and%20potential%20collaboration."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600
+                           px-6 py-3 rounded-xl text-white font-medium
+                           hover:from-green-600 hover:to-green-700
+                           transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <FiMessageCircle className="text-lg" />
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>

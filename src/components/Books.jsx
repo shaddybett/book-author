@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BOOKS } from '../constants/index';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiExternalLink, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
+import { FiExternalLink, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter, FiShoppingCart } from 'react-icons/fi';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -131,6 +132,11 @@ function Books() {
 
 function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const handleOrderClick = () => {
+    navigate('/order-summary', { state: { book } });
+  };
 
   const renderStars = (rating) => {
     const stars = [];
@@ -200,10 +206,8 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
             
             <div className="absolute inset-0 z-20 flex items-center justify-center 
                           opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <motion.a
-                href={book.purchaseLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={handleOrderClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 hover:bg-white text-stone-800 
@@ -211,8 +215,8 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                          shadow-lg hover:shadow-xl flex items-center gap-2 font-semibold"
               >
                 <FiExternalLink className="w-5 h-5" />
-                <span>Buy Now</span>
-              </motion.a>
+                <span>Order Now</span>
+              </motion.button>
             </div>
           </div>
         </motion.div>
@@ -334,10 +338,8 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
 
           {/* Action Links */}
           <div className="flex flex-wrap gap-4 pt-2">
-            <motion.a
-              href={book.purchaseLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={handleOrderClick}
               whileHover={{ 
                 scale: 1.02,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
@@ -350,7 +352,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
             >
               <FiExternalLink className="w-4 h-4" />
               Purchase Book
-            </motion.a>
+            </motion.button>
             
             <motion.button
               onClick={() => setShowExcerpt(!showExcerpt)}
