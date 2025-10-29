@@ -1,6 +1,6 @@
 // import book1 from "../assets/projects/project-1.webp";
 // import book2 from "../assets/projects/project-2.webp";
-import book3 from "../assets/projects/authors.png";
+import book3 from "../assets/projects/author-s.png";
 import book4 from "../assets/projects/authors-2.png";
 
 export const HERO_CONTENT = `From the hills of Kenya to the heart of Canada, I write stories of transformation, resilience, and the courage it takes to rebuild your life in unfamiliar places. Through memoir and inspirational writing, I illuminate the journey of finding home within yourself, even when everything familiar disappears.`;
