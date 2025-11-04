@@ -65,16 +65,14 @@ Still in Google Search Console:
 
 1. Click **"URL Inspection"** in left menu
 2. Type: `
-https://mercy-bett.vercel.app/`
-3. Wait for Google to check
-4. Click **"Request Indexing"**
-5. Wait 1-2 minutes
-6. ✅ Your homepage is submitted!
+
+https://mercylangat.com/` 3. Wait for Google to check 4. Click **"Request Indexing"** 5. Wait 1-2 minutes 6. ✅ Your homepage is submitted!
 
 **Bonus:** Repeat for your book purchase page:
 
 - `
-https://mercy-bett.vercel.app/order-summary`
+
+https://mercylangat.com/order-summary`
 
 ---
 
@@ -121,7 +119,9 @@ The more people visit, the faster Google notices!
 **1. Update Amazon Author Page**
 
 - Add your website:
-  https://mercy-bett.vercel.app/
+
+https://mercylangat.com/
+
 - Link brings traffic AND helps SEO!
 
 **2. Update Goodreads Profile**
@@ -159,10 +159,8 @@ Order your copies today! Link in bio 👆
 Test your site on phone right now:
 
 1. Open:
-   https://mercy-bett.vercel.app/ on your phone
-2. Check if everything looks good
-3. Try the "Order Now" button
-4. Make sure payment flow works
+
+https://mercylangat.com/ on your phone 2. Check if everything looks good 3. Try the "Order Now" button 4. Make sure payment flow works
 
 ✅ It should all work perfectly - it's mobile-optimized!
 
