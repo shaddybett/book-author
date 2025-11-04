@@ -1,12 +1,14 @@
 # 🚀 Complete SEO Optimization Guide for Mercy Langat's Website
 
-Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow this guide to submit it to Google and maximize visibility.
+Your site at
+https://mercy-bett.vercel.app/ is now optimized for Google! Follow this guide to submit it to Google and maximize visibility.
 
 ---
 
 ## ✅ What Has Been Optimized
 
 ### 1. **Meta Tags & SEO Basics**
+
 - ✅ Page title optimized with keywords
 - ✅ Meta description (155 characters, SEO-friendly)
 - ✅ Keywords targeting: "Mercy Langat", "immigration memoir", "Kenya to Canada", etc.
@@ -15,6 +17,7 @@ Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow 
 - ✅ Canonical URL set
 
 ### 2. **Structured Data (Schema.org)**
+
 - ✅ Author schema with biographical information
 - ✅ Book schemas for both books
 - ✅ Address and location data
@@ -22,6 +25,7 @@ Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow 
 - ✅ Helps Google understand your content
 
 ### 3. **Technical SEO**
+
 - ✅ Sitemap.xml created
 - ✅ Robots.txt created
 - ✅ Mobile-responsive design
@@ -35,18 +39,21 @@ Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow 
 ### **Step 1: Google Search Console Setup**
 
 1. **Go to Google Search Console**
+
    - Visit: https://search.google.com/search-console
    - Sign in with your Google account
 
 2. **Add Your Property**
+
    - Click "Add Property"
    - Choose "URL prefix"
    - Enter: `https://mercy-bett.vercel.app`
    - Click "Continue"
 
 3. **Verify Ownership**
-   
+
    **Method 1: HTML Tag (Easiest)**
+
    - Google will show you a meta tag like:
      ```html
      <meta name="google-site-verification" content="YOUR_CODE_HERE" />
@@ -57,6 +64,7 @@ Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow 
    - Go back to Search Console and click "Verify"
 
    **Method 2: DNS Verification (if you have custom domain)**
+
    - Add TXT record to your DNS settings
    - Follow Google's instructions
 
@@ -69,11 +77,14 @@ Your site at https://mercy-bett.vercel.app/ is now optimized for Google! Follow 
 ### **Step 2: Request Indexing**
 
 1. In Google Search Console, go to "URL Inspection"
-2. Enter your homepage: `https://mercy-bett.vercel.app/`
+2. Enter your homepage: `
+https://mercy-bett.vercel.app/`
 3. Click "Request Indexing"
 4. Repeat for important pages:
-   - `https://mercy-bett.vercel.app/order-summary`
-   - `https://mercy-bett.vercel.app/#books`
+   - `
+https://mercy-bett.vercel.app/order-summary`
+   - `
+https://mercy-bett.vercel.app/#books`
 
 ### **Step 3: Google My Business (Optional but Recommended)**
 
@@ -83,7 +94,8 @@ Since Mercy is a published author and offers services:
 2. Create a business profile
 3. Choose category: "Author" or "Writer"
 4. Add location: Ottawa, ON
-5. Add website: https://mercy-bett.vercel.app/
+5. Add website:
+   https://mercy-bett.vercel.app/
 6. Add photos, books, and contact info
 7. This helps with local search results!
 
@@ -94,6 +106,7 @@ Since Mercy is a published author and offers services:
 ### **1. Create Google-Friendly Content**
 
 **Blog Section (Future Enhancement)**
+
 - Add a blog to your site
 - Write about:
   - Immigration experiences
@@ -106,14 +119,16 @@ Since Mercy is a published author and offers services:
 ### **2. Optimize Images**
 
 All images should have:
+
 - **Alt text** describing the image
 - Compressed file size (use tools like TinyPNG)
 - Descriptive filenames (e.g., `navigating-foreign-land-book-cover.jpg`)
 
 **Example for your code:**
+
 ```jsx
-<img 
-  src={book.image} 
+<img
+  src={book.image}
   alt="Navigating a Foreign Land book cover - Mercy Langat memoir about immigration from Kenya to Canada"
 />
 ```
@@ -123,6 +138,7 @@ All images should have:
 **What are backlinks?** Other websites linking to yours.
 
 **How to get them:**
+
 - List your books on:
   - Amazon (you already have this!)
   - Goodreads
@@ -137,6 +153,7 @@ All images should have:
 ### **4. Social Media Integration**
 
 Make sure all your social profiles link to your website:
+
 - Twitter/X bio
 - Instagram bio
 - Facebook page
@@ -147,6 +164,7 @@ Make sure all your social profiles link to your website:
 ### **5. Local SEO (Ottawa)**
 
 Optimize for local searches:
+
 - "Ottawa author"
 - "Canadian immigrant author"
 - "Ottawa book author"
@@ -160,18 +178,21 @@ Add location keywords naturally in your content.
 ### **Tools to Use:**
 
 1. **Google Search Console** (Free)
+
    - https://search.google.com/search-console
    - See which keywords people use to find you
    - Track clicks, impressions, position
    - Find and fix issues
 
 2. **Google Analytics** (Free)
+
    - https://analytics.google.com
    - Track visitor behavior
    - See which pages are most popular
    - Understand your audience
 
 3. **PageSpeed Insights** (Free)
+
    - https://pagespeed.web.dev/
    - Check site speed
    - Get optimization suggestions
@@ -188,12 +209,14 @@ Add location keywords naturally in your content.
 Based on your content, focus on these keywords:
 
 ### **Primary Keywords:**
+
 1. Mercy Langat
 2. Mercy Langat author
 3. Navigating a Foreign Land book
 4. Behind the Vows book
 
 ### **Secondary Keywords:**
+
 1. Kenya to Canada immigration story
 2. Immigrant memoir Canada
 3. African author Canada
@@ -206,6 +229,7 @@ Based on your content, focus on these keywords:
 10. Buy Navigating a Foreign Land
 
 ### **Long-tail Keywords:**
+
 1. "Books about immigrating from Kenya to Canada"
 2. "Memoir about culture shock and belonging"
 3. "Christian marriage advice book"
@@ -217,6 +241,7 @@ Based on your content, focus on these keywords:
 ## 📝 Content Optimization Checklist
 
 ### **Homepage:**
+
 - ✅ Title tag optimized
 - ✅ Meta description with keywords
 - ✅ H1 heading present
@@ -225,7 +250,9 @@ Based on your content, focus on these keywords:
 - ✅ Contact information
 
 ### **Book Pages:**
+
 For each book, make sure:
+
 - ✅ Book title in heading
 - ✅ Detailed description
 - ✅ ISBN/ASIN visible
@@ -234,6 +261,7 @@ For each book, make sure:
 - ✅ Author info
 
 ### **Order Summary Page:**
+
 - ✅ Book details
 - ✅ Clear pricing
 - ✅ Secure checkout
@@ -246,6 +274,7 @@ For each book, make sure:
 When you make updates (like adding Google verification tag):
 
 ### **Option 1: Using Vercel CLI**
+
 ```bash
 # From your project directory
 npm run build
@@ -253,14 +282,17 @@ vercel --prod
 ```
 
 ### **Option 2: Using Git (Recommended)**
+
 ```bash
 git add .
 git commit -m "Add Google verification and SEO improvements"
 git push origin main
 ```
+
 Vercel will auto-deploy from GitHub!
 
 ### **Option 3: Vercel Dashboard**
+
 - Log in to https://vercel.com
 - Find your project
 - Go to "Deployments"
@@ -271,20 +303,24 @@ Vercel will auto-deploy from GitHub!
 ## ⏱️ Timeline: When Will Google Show My Site?
 
 ### **Immediate (Hours)**
+
 - Google Search Console verification
 - Manual indexing request
 
 ### **Within 1-2 Weeks**
+
 - First appearance in Google search
 - Basic pages indexed
 - May appear for branded searches ("Mercy Langat")
 
 ### **Within 1-3 Months**
+
 - Better rankings for keywords
 - More pages indexed
 - Increased organic traffic
 
 ### **3-6 Months**
+
 - Strong rankings for target keywords
 - Steady organic traffic
 - Established authority
@@ -324,15 +360,18 @@ Vercel will auto-deploy from GitHub!
 ## 📚 Additional Resources
 
 ### **SEO Learning:**
+
 - Google Search Central: https://developers.google.com/search
 - Moz Beginner's Guide: https://moz.com/beginners-guide-to-seo
 - Neil Patel's Blog: https://neilpatel.com/blog/
 
 ### **Author-Specific SEO:**
+
 - Reedsy Blog: https://blog.reedsy.com/
 - Jane Friedman: https://www.janefriedman.com/
 
 ### **Tools:**
+
 - Google Keyword Planner: https://ads.google.com/home/tools/keyword-planner/
 - Answer The Public: https://answerthepublic.com/
 - Ubersuggest: https://neilpatel.com/ubersuggest/
@@ -344,6 +383,7 @@ Vercel will auto-deploy from GitHub!
 Copy this checklist and check off as you complete:
 
 ### **Immediate Actions:**
+
 - [ ] Submit site to Google Search Console
 - [ ] Add Google verification tag to index.html
 - [ ] Redeploy to Vercel
@@ -353,6 +393,7 @@ Copy this checklist and check off as you complete:
 - [ ] Share site on personal social media
 
 ### **This Week:**
+
 - [ ] Set up Google Analytics
 - [ ] Create Google My Business profile
 - [ ] Update all social media bios with website
@@ -361,6 +402,7 @@ Copy this checklist and check off as you complete:
 - [ ] Share with 10 friends/family to generate traffic
 
 ### **This Month:**
+
 - [ ] Write and publish first blog post (if applicable)
 - [ ] Reach out to 5 book bloggers/reviewers
 - [ ] Submit to 3 book directories
@@ -369,6 +411,7 @@ Copy this checklist and check off as you complete:
 - [ ] Create engaging social media posts about the books
 
 ### **Ongoing (Every Month):**
+
 - [ ] Monitor Google Search Console for issues
 - [ ] Check Analytics for traffic insights
 - [ ] Create new content (blog, social media)
@@ -381,12 +424,14 @@ Copy this checklist and check off as you complete:
 ## 🆘 Troubleshooting
 
 ### **"My site isn't showing up on Google"**
+
 - Wait 1-2 weeks after submission
 - Check Google Search Console for errors
 - Make sure robots.txt isn't blocking Google
 - Request manual indexing again
 
 ### **"I'm on Google but not ranking well"**
+
 - Add more quality content
 - Get more backlinks
 - Optimize for specific keywords
@@ -394,6 +439,7 @@ Copy this checklist and check off as you complete:
 - Make sure content is unique and valuable
 
 ### **"Google Search Console shows errors"**
+
 - Read the specific error message
 - Fix the issue in your code
 - Redeploy
@@ -423,4 +469,3 @@ Your website is now SEO-optimized and ready for Google! Follow the steps above, 
 **Questions?** Feel free to reach out or check the resources above. Your journey to Google visibility starts now! 🚀
 
 Good luck!
-

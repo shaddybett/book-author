@@ -1,4 +1,5 @@
-# robots.txt for https://mercy-bett.vercel.app/
+# robots.txt for 
+https://mercy-bett.vercel.app/
 
 User-agent: *
 Allow: /
@@ -8,7 +9,8 @@ Allow: /order-summary
 # Disallow: /admin/
 
 # Sitemap location
-Sitemap: https://mercy-bett.vercel.app/sitemap.xml
+Sitemap: 
+https://mercy-bett.vercel.app/sitemap.xml
 
 # Allow all search engines to index images
 User-agent: Googlebot-Image
