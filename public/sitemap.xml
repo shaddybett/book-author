@@ -3,7 +3,8 @@
   <!-- Homepage -->
   <url>
     <loc>
-https://mercy-bett.vercel.app/</loc>
+
+https://mercylangat.com/</loc>
     <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,7 +13,8 @@ https://mercy-bett.vercel.app/</loc>
   <!-- Order Summary Page -->
   <url>
     <loc>
-https://mercy-bett.vercel.app/order-summary</loc>
+
+https://mercylangat.com/order-summary</loc>
     <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -21,7 +23,8 @@ https://mercy-bett.vercel.app/order-summary</loc>
   <!-- Books Section (anchor) -->
   <url>
     <loc>
-https://mercy-bett.vercel.app/#books</loc>
+
+https://mercylangat.com/#books</loc>
     <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +33,8 @@ https://mercy-bett.vercel.app/#books</loc>
   <!-- About Section (anchor) -->
   <url>
     <loc>
-https://mercy-bett.vercel.app/#about</loc>
+
+https://mercylangat.com/#about</loc>
     <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -39,7 +43,8 @@ https://mercy-bett.vercel.app/#about</loc>
   <!-- Contact Section (anchor) -->
   <url>
     <loc>
-https://mercy-bett.vercel.app/#contact</loc>
+
+https://mercylangat.com/#contact</loc>
     <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

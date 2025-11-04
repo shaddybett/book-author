@@ -2,8 +2,9 @@
 
 ## ✅ What Has Been Done
 
-Your website **
-https://mercy-bett.vercel.app/** is now fully optimized for Google search! Here's everything that was implemented:
+Your website \*\*
+
+https://mercylangat.com/** is now fully optimized for Google search! Here's everything that was implemented:
 
 ---
 

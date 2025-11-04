@@ -1,7 +1,8 @@
 # 🚀 Complete SEO Optimization Guide for Mercy Langat's Website
 
 Your site at
-https://mercy-bett.vercel.app/ is now optimized for Google! Follow this guide to submit it to Google and maximize visibility.
+
+https://mercylangat.com/ is now optimized for Google! Follow this guide to submit it to Google and maximize visibility.
 
 ---
 
@@ -78,13 +79,16 @@ https://mercy-bett.vercel.app/ is now optimized for Google! Follow this guide to
 
 1. In Google Search Console, go to "URL Inspection"
 2. Enter your homepage: `
-https://mercy-bett.vercel.app/`
-3. Click "Request Indexing"
-4. Repeat for important pages:
-   - `
-https://mercy-bett.vercel.app/order-summary`
-   - `
-https://mercy-bett.vercel.app/#books`
+
+https://mercylangat.com/` 3. Click "Request Indexing" 4. Repeat for important pages:
+
+- `
+
+https://mercylangat.com/order-summary`
+
+- `
+
+https://mercylangat.com/#books`
 
 ### **Step 3: Google My Business (Optional but Recommended)**
 
@@ -95,9 +99,8 @@ Since Mercy is a published author and offers services:
 3. Choose category: "Author" or "Writer"
 4. Add location: Ottawa, ON
 5. Add website:
-   https://mercy-bett.vercel.app/
-6. Add photos, books, and contact info
-7. This helps with local search results!
+
+https://mercylangat.com/ 6. Add photos, books, and contact info 7. This helps with local search results!
 
 ---
 
