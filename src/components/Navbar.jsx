@@ -66,8 +66,8 @@ function Navbar() {
 
   const socialLinks = [
     { icon: FaSquareXTwitter, href: "https://twitter.com/mercybettauthor", label: "Twitter" },
-    { icon: FaInstagram, href: "https://instagram.com/mercybettauthor", label: "Instagram" },
-    { icon: FaFacebook, href: "https://facebook.com/mercybettauthor", label: "Facebook" }
+    { icon: FaInstagram, href: "https://www.instagram.com/mercy_chep_/", label: "Instagram" },
+    { icon: FaFacebook, href: "https://www.facebook.com/Mer.langat", label: "Facebook" }
   ]
 
   return (

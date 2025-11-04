@@ -123,8 +123,8 @@ export const CONTACT = {
   website: "www.mercylangat.com",
   socialMedia: {
     twitter: "https://twitter.com/mercylangat",
-    instagram: "https://instagram.com/mercylangat",
-    facebook: "https://facebook.com/mercylangat",
+    instagram: "https://www.instagram.com/mercy_chep_/",
+    facebook: "https://www.facebook.com/Mer.langat",
     goodreads: "https://goodreads.com/mercylangat"
   }
 };
