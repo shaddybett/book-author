@@ -122,7 +122,7 @@ export const CONTACT = {
   email: "merchepkim@gmail.com",
   website: "www.mercylangat.com",
   socialMedia: {
-    twitter: "https://twitter.com/mercylangat",
+    twitter: "https://x.com/mercy_blangat?s=21&t=4fV5qSts1bEuUpkaD9IWUg",
     instagram: "https://www.instagram.com/mercy_chep_/",
     facebook: "https://www.facebook.com/Mer.langat",
     goodreads: "https://goodreads.com/mercylangat"
