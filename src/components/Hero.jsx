@@ -1,5 +1,5 @@
 import React from 'react'
-import authorPic from "../assets/prof1.jpg"
+import authorPic from "../assets/prof1.webp"
 import { HERO_CONTENT } from '../constants/index'
 import { motion } from "framer-motion"
 import { FiBookOpen, FiAward, FiUsers } from 'react-icons/fi'
