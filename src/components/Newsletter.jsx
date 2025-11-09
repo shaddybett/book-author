@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMail, FiCheck, FiGift } from 'react-icons/fi';
+import { FiMail, FiCheck, FiGift, FiExternalLink } from 'react-icons/fi';
 import { NEWSLETTER } from '../constants';
 
 const Newsletter = () => {
@@ -8,12 +8,20 @@ const Newsletter = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Substack configuration
+  const SUBSTACK_URL = 'https://mercylangat.substack.com';
+  const SUBSTACK_SUBSCRIBE_URL = 'https://mercylangat.substack.com/subscribe';
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate API call
+    // Redirect to Substack with pre-filled email
+    const substackUrl = `${SUBSTACK_SUBSCRIBE_URL}?email=${encodeURIComponent(email)}`;
+    
+    // Short delay for UX
     setTimeout(() => {
+      window.open(substackUrl, '_blank');
       setIsLoading(false);
       setIsSubmitted(true);
       setEmail('');
@@ -22,7 +30,7 @@ const Newsletter = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    }, 500);
   };
 
   return (
@@ -123,9 +131,14 @@ const Newsletter = () => {
                              px-8 py-4 rounded-xl font-semibold
                              transition-colors duration-200 whitespace-nowrap
                              disabled:opacity-50 disabled:cursor-not-allowed
-                             shadow-lg hover:shadow-xl"
+                             shadow-lg hover:shadow-xl flex items-center gap-2 justify-center"
                   >
-                    {isLoading ? 'Joining...' : 'Join Now'}
+                    {isLoading ? 'Opening Substack...' : (
+                      <>
+                        <span>Join Now</span>
+                        <FiExternalLink className="w-4 h-4" />
+                      </>
+                    )}
                   </motion.button>
                 </motion.form>
               ) : (
@@ -148,18 +161,39 @@ const Newsletter = () => {
                   </motion.div>
                   
                   <h3 className="text-xl font-bold text-white mb-2">
-                    Welcome to the Story Circle!
+                    Almost There!
                   </h3>
-                  <p className="text-stone-300">
-                    Check your inbox for a confirmation email
+                  <p className="text-stone-300 mb-4">
+                    Complete your subscription on Substack to join the Story Circle
                   </p>
+                  <a
+                    href={SUBSTACK_SUBSCRIBE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-white hover:text-stone-300 
+                             text-sm underline transition-colors"
+                  >
+                    Didn't open? Click here
+                    <FiExternalLink className="w-3 h-3" />
+                  </a>
                 </motion.div>
               )}
             </AnimatePresence>
 
-            {/* Privacy note */}
+            {/* Privacy note & Substack link */}
             <p className="text-stone-500 text-xs text-center mt-6">
               Your privacy matters. Unsubscribe anytime. No spam, ever.
+            </p>
+            <p className="text-stone-400 text-xs text-center mt-2">
+              Powered by{' '}
+              <a 
+                href={SUBSTACK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors underline"
+              >
+                Substack
+              </a>
             </p>
           </div>
         </div>
