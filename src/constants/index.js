@@ -118,7 +118,7 @@ export const TESTIMONIALS = [
 
 export const CONTACT = {
   address: "Ottawa, ON, Canada",
-  phoneNo: "+1 (905) 347-3564",
+  phoneNo: "+254 713 315 219",
   email: "merchepkim@gmail.com",
   website: "www.mercylangat.com",
   socialMedia: {
