@@ -1,7 +1,7 @@
 // import book1 from "../assets/projects/project-1.webp";
-// import book2 from "../assets/projects/project-2.webp";
+import book2 from "../assets/projects/kiswahili.jpeg";
 import book3 from "../assets/projects/author-s.webp";
-import book4 from "../assets/projects/authors-2.webp";
+import book4 from "../assets/projects/vows.webp";
 
 export const HERO_CONTENT = `From the hills of Kenya to the heart of Canada, I write stories of transformation, resilience, and the courage it takes to rebuild your life in unfamiliar places. Through memoir and inspirational writing, I illuminate the journey of finding home within yourself, even when everything familiar disappears.`;
 
@@ -38,21 +38,6 @@ export const BOOKS = [
   //   awards: ["Readers' Choice Award 2023", "Goodreads Fantasy Finalist"],
   //   excerpt: "The trees had been whispering for three days before Aria finally understood their language..."
   // },
-  // {
-  //   title: "Tomorrow's Echo",
-  //   image: book2,
-  //   description:
-  //     "When physicist Maya Chen creates a device that receives messages from the future, she discovers humanity's fate hangs by a thread—and she has only seven days to change it. A mind-bending science fiction thriller exploring free will, sacrifice, and the butterfly effect of choice.",
-  //   genre: "Science Fiction",
-  //   price: "$18.99",
-  //   purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
-  //   isbn: "978-1234567891",
-  //   publishedYear: "2022",
-  //   rating: 4.9,
-  //   pages: 416,
-  //   awards: ["National Book Critics Circle Finalist", "NPR Best Books 2022"],
-  //   excerpt: "The message arrived on a Tuesday: 'Don't let them launch. You have seven days.'"
-  // },
   {
     title: "Navigating a Foreign Land",
     image: book3,
@@ -83,6 +68,24 @@ export const BOOKS = [
     awards: ["Marriage & Relationships Bestseller", "Inspirational Read"],
     excerpt: "Those who know me personally might be wondering; 'What does she know about marriage? Only ten years into it, and she's just 32! What could she possibly have learned in such a short time?' Well, I understand ten years may not be a lifetime, but it is long enough to see patterns, to experience highs and lows, and to learn lessons that can't be taught in theory..."
   },
+{
+  title: "Kiswahili Lugha Yetu",
+  image: book2,
+  description:
+    "Kiswahili Lugha Yetu is a bright and engaging beginner’s guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
+  genre: "Children’s Educational / Language Learning",
+  price: "1500",
+  purchaseLink: "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
+  isbn: "978-1-234567-891",
+  publishedYear: "2024",
+  rating: 4.9,
+  pages: 64,
+  awards: [
+    "Best Children's Educational Book Nominee 2024",
+    "Readers’ Choice Favorite Language Book"
+  ],
+}
+
 ];
 
 export const WRITING_GENRES = [
@@ -145,6 +148,6 @@ export const NEWSLETTER = {
 export const PAYMENT_CONFIG = {
   paystackPublicKey: "pk_test_00e40d5cd3e321a68b22aad7e1c42a62f8587d4c", // Replace with your actual Paystack public key
   whatsappNumber: "19053473564", // Replace with author's WhatsApp number (with country code, no + or spaces)
-  deliveryFee: 250, // KES
+  deliveryFee: 0, // KES
   currency: "KES"
 };

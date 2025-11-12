@@ -107,7 +107,7 @@ const Footer = () => {
                   <strong>Email:</strong> {CONTACT.email}
                 </div>
                 <div className="text-stone-300 text-sm">
-                  <strong>WhatsApp:</strong> +1 (905) 347-3564
+                  <strong>WhatsApp:</strong> +254 713 315 219
                 </div>
                 <div className="text-stone-300 text-sm">
                   <strong>Location:</strong> {CONTACT.address}
@@ -125,7 +125,7 @@ const Footer = () => {
                   Email Me
                 </a>
                 <a
-                  href="https://wa.me/19053473564?text=Hi%20Mercy!%20I'd%20like%20to%20discuss%20your%20books%20and%20potential%20collaboration."
+                  href="https://wa.me/254713315219?text=Hi%20Mercy!%20I'd%20like%20to%20discuss%20your%20books%20and%20potential%20collaboration."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600
