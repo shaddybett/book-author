@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowLeft, FiPackage, FiCheck, FiAlertCircle, FiSmartphone, FiLoader } from 'react-icons/fi';
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://author-fwlz.onrender.com';
 
 function OrderSummaryMpesa() {
   const location = useLocation();
