@@ -7,30 +7,36 @@
 **Location**: `server/` directory
 
 #### Files Created:
+
 1. **`server.js`** - Main Express server
+
    - CORS configuration
    - Route handling
    - Error middleware
 
 2. **`controllers/mpesaController.js`** - Payment logic
+
    - `initiateStkPush()` - Start payment
    - `mpesaCallback()` - Handle M-Pesa response
    - `queryTransactionStatus()` - Check payment status
    - `queryStkStatus()` - Query M-Pesa API
 
 3. **`routes/mpesa.js`** - API endpoints
+
    - POST `/api/mpesa/stkpush` - Initiate payment
    - POST `/api/mpesa/callback` - M-Pesa callback
    - GET `/api/mpesa/transaction/:id` - Status check
    - POST `/api/mpesa/query` - Query M-Pesa
 
 4. **`utils/mpesaHelpers.js`** - Helper functions
+
    - `generateToken()` - Get OAuth token
    - `generatePassword()` - Create STK password
    - `formatPhoneNumber()` - Format to 254XXXXXXXXX
    - `isValidKenyanPhone()` - Validate phone
 
 5. **`package.json`** - Dependencies
+
    - Express, Axios, CORS, Dotenv, Body-parser
 
 6. **`env.example`** - Environment template
@@ -44,6 +50,7 @@
 #### Files Created/Modified:
 
 1. **`src/pages/OrderSummaryMpesa.jsx`** - NEW
+
    - Book details display
    - Customer information form
    - M-Pesa payment integration
@@ -52,11 +59,13 @@
    - Beautiful UI with animations
 
 2. **`src/App.jsx`** - MODIFIED
+
    - Added React Router
    - Route for OrderSummary page
    - Maintained existing homepage
 
 3. **`src/main.jsx`** - MODIFIED
+
    - Added BrowserRouter wrapper
 
 4. **`src/components/Books.jsx`** - ALREADY UPDATED
@@ -100,6 +109,7 @@ Redirect to WhatsApp
 ## 📡 API Endpoints
 
 ### 1. Initiate Payment
+
 ```
 POST /api/mpesa/stkpush
 Content-Type: application/json
@@ -125,6 +135,7 @@ Response:
 ```
 
 ### 2. M-Pesa Callback
+
 ```
 POST /api/mpesa/callback
 (Automatically called by M-Pesa)
@@ -142,6 +153,7 @@ Body:
 ```
 
 ### 3. Check Status
+
 ```
 GET /api/mpesa/transaction/{checkoutRequestId}
 
@@ -163,6 +175,7 @@ Response:
 ## 🎯 Features Implemented
 
 ### ✅ Backend Features:
+
 - [x] OAuth token generation
 - [x] STK Push initiation
 - [x] Callback handling
@@ -174,6 +187,7 @@ Response:
 - [x] Environment-based configuration
 
 ### ✅ Frontend Features:
+
 - [x] Book selection & routing
 - [x] Order summary page
 - [x] Customer details form
@@ -200,6 +214,7 @@ Response:
 ## 💾 Data Structure
 
 ### Transaction Object:
+
 ```javascript
 {
   checkoutRequestId: "ws_CO_xxx",
@@ -220,6 +235,7 @@ Response:
 ## 📦 Dependencies
 
 ### Backend:
+
 ```json
 {
   "express": "^4.18.2",
@@ -231,6 +247,7 @@ Response:
 ```
 
 ### Frontend:
+
 ```json
 {
   "react-router-dom": "Latest",
@@ -280,11 +297,14 @@ npm run build
 ## 🧪 Testing
 
 ### Sandbox Test Numbers:
+
 - **Success**: 254708374149
 - **Failure**: 254700000000
 
 ### Test Flow:
-1. Navigate to http://localhost:5173
+
+1. Navigate to
+   https://www.mercylangat.com
 2. Click any book
 3. Fill details with test number
 4. Initiate payment
@@ -296,6 +316,7 @@ npm run build
 ## 📝 Environment Variables Needed
 
 ### Backend (.env):
+
 ```
 MPESA_CONSUMER_KEY=xxx
 MPESA_CONSUMER_SECRET=xxx
@@ -303,11 +324,13 @@ MPESA_PASSKEY=xxx
 MPESA_SHORTCODE=174379
 MPESA_ENVIRONMENT=sandbox
 PORT=5000
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=
+https://www.mercylangat.com
 MPESA_CALLBACK_URL=http://localhost:5000/api/mpesa/callback
 ```
 
 ### Frontend (.env):
+
 ```
 VITE_API_URL=http://localhost:5000
 ```
@@ -341,19 +364,23 @@ VITE_API_URL=http://localhost:5000
 ### For You (Developer):
 
 1. **Get Daraja Credentials**:
+
    - Register at https://developer.safaricom.co.ke/
    - Create app
    - Get Consumer Key, Secret, Passkey
 
 2. **Configure Environment**:
+
    - Copy env.example to .env
    - Add your credentials
 
 3. **Test in Sandbox**:
+
    - Use provided test numbers
    - Verify payment flow
 
 4. **Setup Ngrok** (for local testing):
+
    - Install ngrok
    - Run: `ngrok http 5000`
    - Update callback URL in .env
@@ -367,14 +394,17 @@ VITE_API_URL=http://localhost:5000
 ### For Client (Mercy Langat):
 
 1. **Safaricom Account**:
+
    - M-Pesa Paybill/Till number
    - Registered business details
 
 2. **Daraja Portal**:
+
    - Complete registration
    - Provide business documents
 
 3. **Testing**:
+
    - Test with real phone numbers
    - Verify WhatsApp redirect
 
@@ -387,11 +417,13 @@ VITE_API_URL=http://localhost:5000
 ## 💰 Pricing & Fees
 
 **M-Pesa Transaction Fees** (Check with Safaricom):
+
 - Paybill: ~1-2% per transaction
 - Till Number: Fixed fee per transaction
 - Monthly subscription (if applicable)
 
 **Daraja API**:
+
 - Free for developers
 - Pay only M-Pesa transaction fees
 
@@ -436,4 +468,3 @@ You now have a complete, production-ready M-Pesa integration! The system handles
 **Implementation Date**: November 2025
 **Version**: 1.0.0
 **Status**: ✅ Complete & Ready for Testing
-

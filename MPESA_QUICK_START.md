@@ -32,7 +32,8 @@ MPESA_PASSKEY=your_passkey_here
 MPESA_SHORTCODE=174379
 MPESA_ENVIRONMENT=sandbox
 PORT=5000
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=
+https://www.mercylangat.com
 MPESA_CALLBACK_URL=http://localhost:5000/api/mpesa/callback
 MPESA_RESULT_URL=http://localhost:5000/api/mpesa/result
 ```
@@ -44,7 +45,7 @@ MPESA_RESULT_URL=http://localhost:5000/api/mpesa/result
 cd server
 npm run dev
 
-# Terminal 2 - Frontend  
+# Terminal 2 - Frontend
 cd ..
 npm run dev
 ```
@@ -53,7 +54,8 @@ npm run dev
 
 ## 🧪 Test It
 
-1. Open http://localhost:5173
+1. Open
+   https://www.mercylangat.com
 2. Click any book → "Order Now"
 3. Fill details:
    - Phone: `254708374149` (test number)
@@ -83,11 +85,11 @@ paza/
 
 ## 🔑 API Endpoints
 
-| Endpoint | Method | Purpose |
-|----------|--------|---------|
-| `/api/mpesa/stkpush` | POST | Initiate payment |
-| `/api/mpesa/callback` | POST | M-Pesa callback |
-| `/api/mpesa/transaction/:id` | GET | Check status |
+| Endpoint                     | Method | Purpose          |
+| ---------------------------- | ------ | ---------------- |
+| `/api/mpesa/stkpush`         | POST   | Initiate payment |
+| `/api/mpesa/callback`        | POST   | M-Pesa callback  |
+| `/api/mpesa/transaction/:id` | GET    | Check status     |
 
 ---
 
@@ -107,6 +109,7 @@ paza/
 ## 📚 Full Documentation
 
 See `MPESA_SETUP_GUIDE.md` for:
+
 - Detailed setup instructions
 - Production deployment
 - Security best practices
@@ -119,6 +122,7 @@ See `MPESA_SETUP_GUIDE.md` for:
 Your M-Pesa integration is live! Customers can now pay with their phones.
 
 **Next Steps:**
+
 1. Test thoroughly in sandbox
 2. Apply for production credentials
 3. Deploy to production
@@ -127,4 +131,3 @@ Your M-Pesa integration is live! Customers can now pay with their phones.
 ---
 
 **Need Help?** Check MPESA_SETUP_GUIDE.md or contact Safaricom support.
-

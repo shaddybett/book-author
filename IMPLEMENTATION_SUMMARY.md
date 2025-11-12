@@ -9,9 +9,11 @@ I've successfully implemented a complete, production-ready purchase flow for you
 ## 🎯 Core Features
 
 ### 1. **Order Summary Page** (`src/pages/OrderSummary.jsx`)
+
 A dedicated page that shows when users click "Purchase Book" or "Order Now" on any book.
 
 **Features:**
+
 - ✅ Beautiful, responsive design matching your site's aesthetic
 - ✅ Complete book details (cover, title, description, metadata)
 - ✅ Price breakdown showing:
@@ -24,14 +26,17 @@ A dedicated page that shows when users click "Purchase Book" or "Order Now" on a
 - ✅ Clear status messages (success/error)
 
 ### 2. **Paystack Payment Integration**
+
 Fully integrated Paystack payment system using the official `react-paystack` package.
 
 **Supports:**
+
 - 💳 Visa and MasterCard
 - 📱 M-Pesa (Kenya mobile money)
 - 🌍 Other Paystack payment methods based on region
 
 **Payment Flow:**
+
 1. User fills in their details (name, email, phone)
 2. Clicks "Continue to Payment"
 3. Paystack modal opens with secure payment form
@@ -40,15 +45,18 @@ Fully integrated Paystack payment system using the official `react-paystack` pac
 6. User is redirected to WhatsApp
 
 ### 3. **WhatsApp Integration**
+
 After successful payment, users are automatically redirected to your WhatsApp.
 
 **Message includes:**
+
 - Book title purchased
 - Customer name, email, and phone
 - Paystack payment reference
 - Request for delivery details
 
 **Example WhatsApp message:**
+
 ```
 Hi, I just purchased "Whispers in the Willows".
 
@@ -63,30 +71,35 @@ Please send me delivery details.
 ```
 
 ### 4. **Updated Book Display** (`src/components/Books.jsx`)
+
 Modified the Books component to use internal navigation instead of external links.
 
 **Changes:**
+
 - ✅ "Order Now" and "Purchase Book" buttons now navigate to order summary
 - ✅ Book data is passed via React Router state
 - ✅ Uses shopping cart icon for better UX
 - ✅ Maintains all existing animations and hover effects
 
 ### 5. **React Router Setup** (`src/App.jsx`)
+
 Configured routing for seamless navigation between pages.
 
 **Routes:**
+
 - `/` - Home page with all sections
 - `/order-summary` - Purchase and payment page
 
 ### 6. **Configuration System** (`src/constants/index.js`)
+
 Added centralized payment configuration.
 
 ```javascript
 export const PAYMENT_CONFIG = {
   paystackPublicKey: "pk_test_...", // Your Paystack key
-  whatsappNumber: "254700000000",   // Your WhatsApp number
-  deliveryFee: 250,                 // Delivery fee in KES
-  currency: "KES"                   // Currency
+  whatsappNumber: "254700000000", // Your WhatsApp number
+  deliveryFee: 250, // Delivery fee in KES
+  currency: "KES", // Currency
 };
 ```
 
@@ -96,8 +109,8 @@ export const PAYMENT_CONFIG = {
 
 ```json
 {
-  "react-router-dom": "^6.x",  // For page navigation
-  "react-paystack": "^6.0.0"   // For Paystack integration
+  "react-router-dom": "^6.x", // For page navigation
+  "react-paystack": "^6.0.0" // For Paystack integration
 }
 ```
 
@@ -106,6 +119,7 @@ export const PAYMENT_CONFIG = {
 ## 🎨 Design & UX
 
 **Consistent Styling:**
+
 - ✅ Matches your existing dark theme
 - ✅ Same gradient backgrounds and color scheme
 - ✅ Consistent button styles and hover effects
@@ -113,6 +127,7 @@ export const PAYMENT_CONFIG = {
 - ✅ Smooth animations using Framer Motion
 
 **User Experience:**
+
 - ✅ Clear step-by-step flow
 - ✅ Informative messages at each stage
 - ✅ Error handling and validation
@@ -139,11 +154,12 @@ export const PAYMENT_CONFIG = {
   paystackPublicKey: "pk_test_YOUR_ACTUAL_KEY_HERE",
   whatsappNumber: "254712345678", // Your actual WhatsApp number
   deliveryFee: 250,
-  currency: "KES"
+  currency: "KES",
 };
 ```
 
-**Important:** 
+**Important:**
+
 - WhatsApp number format: `254712345678` (country code + number, no + or spaces)
 - For Kenya: `254` + your number without the leading 0
 - Example: `0712345678` becomes `254712345678`
@@ -151,12 +167,14 @@ export const PAYMENT_CONFIG = {
 ### Step 3: Test Everything
 
 ```bash
-# Server should already be running at http://localhost:5173
+# Server should already be running at
+https://www.mercylangat.com
 # If not, start it with:
 npm run dev
 ```
 
 **Testing Steps:**
+
 1. Open the site
 2. Scroll to any book
 3. Click "Purchase Book" or "Order Now"
@@ -190,35 +208,42 @@ When ready for real payments:
 Here's what your customers will experience:
 
 ### 1. **Browse Books**
+
 - Beautiful showcase of your books
 - Hover effects and animations
 - Read excerpts and reviews
 
 ### 2. **Select a Book**
+
 - Click "Purchase Book" or "Order Now"
 - Instantly navigate to order summary
 
 ### 3. **Review Order**
+
 - See complete book details
 - View price breakdown
 - Understand what happens next
 
 ### 4. **Enter Details**
+
 - Fill in name, email, phone
 - Form validation ensures correct data
 - Click "Continue to Payment"
 
 ### 5. **Pay Securely**
+
 - Paystack modal opens
 - Multiple payment options
 - Secure, encrypted payment
 
 ### 6. **Confirm Purchase**
+
 - Success message shown
 - 2-second countdown
 - Automatic WhatsApp redirect
 
 ### 7. **Finalize Delivery**
+
 - WhatsApp opens with pre-filled message
 - Customer can send immediately
 - You receive order notification
@@ -240,6 +265,7 @@ Here's what your customers will experience:
 When a customer completes a purchase, you'll get:
 
 1. **WhatsApp Message** with:
+
    - Customer name
    - Customer email
    - Customer phone
@@ -284,16 +310,19 @@ When a customer completes a purchase, you'll get:
 ## 🐛 Troubleshooting
 
 ### Payment Modal Not Opening?
+
 - Check Paystack public key is correct
 - Open browser console for errors
 - Verify you're using test key for testing
 
 ### WhatsApp Not Opening?
+
 - Check WhatsApp number format
 - Must be: country code + number (e.g., `254712345678`)
 - No spaces, no + symbol
 
 ### Styling Issues?
+
 - Clear browser cache
 - Restart dev server
 - Check all dependencies installed
@@ -311,6 +340,7 @@ When a customer completes a purchase, you'll get:
 ## 🎉 You're All Set!
 
 Your book purchase flow is complete and ready to use. The implementation is:
+
 - ✅ Production-ready
 - ✅ Mobile-responsive
 - ✅ Secure and compliant
@@ -324,6 +354,3 @@ Just add your Paystack credentials and WhatsApp number, test it, and you're read
 ---
 
 **Happy Selling!** 📚💰
-
-
-

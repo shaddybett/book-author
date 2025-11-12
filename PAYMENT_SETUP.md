@@ -35,11 +35,12 @@ export const PAYMENT_CONFIG = {
   paystackPublicKey: "pk_test_your_actual_key_here", // Replace with your Paystack public key
   whatsappNumber: "254700123456", // Replace with your WhatsApp number (country code + number, no + or spaces)
   deliveryFee: 250, // Delivery fee in KES (you can change this)
-  currency: "KES" // Currency code
+  currency: "KES", // Currency code
 };
 ```
 
 **Important Notes:**
+
 - For **WhatsApp number**: Use format like `254700123456` (Kenya) or your country code + number
 - No spaces, no "+" symbol, just the digits
 - Example: `254712345678` for Kenya, `2348012345678` for Nigeria, etc.
@@ -51,6 +52,7 @@ export const PAYMENT_CONFIG = {
 Paystack provides test cards for testing:
 
 **Test Card Details:**
+
 - **Card Number**: `5060 6668 6666 6666 666` (for Nigeria/Ghana) or `4084 0840 8408 4081` (international)
 - **CVV**: `123`
 - **Expiry**: Any future date (e.g., `12/25`)
@@ -60,17 +62,20 @@ Paystack provides test cards for testing:
 #### Testing Flow:
 
 1. Start the development server:
+
    ```bash
    npm run dev
    ```
 
-2. Navigate to your site (usually `http://localhost:5173`)
+2. Navigate to your site (usually `
+https://www.mercylangat.com`)
 
 3. Click on any book's "Purchase Book" or "Order Now" button
 
 4. You'll be redirected to the Order Summary page
 
 5. Fill in customer details (you can use test data):
+
    - Name: Test User
    - Email: test@example.com
    - Phone: +254700000000
@@ -88,13 +93,15 @@ Paystack provides test cards for testing:
 When you're ready to go live:
 
 1. **Switch to Live Mode in Paystack**:
+
    - Go to Paystack Dashboard
    - Toggle from "Test Mode" to "Live Mode"
    - Copy your **Live Public Key** (starts with `pk_live_`)
 
 2. **Update the configuration** in `src/constants/index.js`:
+
    ```javascript
-   paystackPublicKey: "pk_live_your_live_key_here"
+   paystackPublicKey: "pk_live_your_live_key_here";
    ```
 
 3. **Build and deploy**:
@@ -107,6 +114,7 @@ When you're ready to go live:
 ### Changing the Delivery Fee
 
 Edit `src/constants/index.js`:
+
 ```javascript
 export const PAYMENT_CONFIG = {
   // ... other settings
@@ -119,6 +127,7 @@ export const PAYMENT_CONFIG = {
 If you want to use a different currency (e.g., USD, NGN):
 
 1. Update the configuration:
+
    ```javascript
    export const PAYMENT_CONFIG = {
      // ... other settings
@@ -164,16 +173,19 @@ Edit `src/pages/OrderSummary.jsx` around line 69-79 to customize the message sen
 ## 🐛 Troubleshooting
 
 ### Payment modal doesn't open
+
 - Check that your Paystack public key is correct
 - Ensure you're using the correct key for your environment (test vs live)
 - Check browser console for errors
 
 ### WhatsApp redirect not working
+
 - Verify your WhatsApp number format (no spaces, no +)
 - Ensure you have WhatsApp installed or WhatsApp Web access
 - Test the format: `https://wa.me/254700123456`
 
 ### Styling issues
+
 - Clear browser cache
 - Rebuild the project: `npm run build`
 - Check that Tailwind CSS is properly configured
@@ -181,10 +193,12 @@ Edit `src/pages/OrderSummary.jsx` around line 69-79 to customize the message sen
 ## 📞 Support
 
 For Paystack-specific issues:
+
 - Documentation: [https://paystack.com/docs](https://paystack.com/docs)
 - Support: [support@paystack.com](mailto:support@paystack.com)
 
 For integration issues:
+
 - Check the browser console for errors
 - Verify all configuration values
 - Test with Paystack test cards first
@@ -192,12 +206,10 @@ For integration issues:
 ## 🎉 You're All Set!
 
 Your book purchase flow is now ready. Remember to:
+
 1. ✅ Add your real Paystack public key
 2. ✅ Add your WhatsApp number
 3. ✅ Test thoroughly with test cards
 4. ✅ Switch to live mode when ready
 
 Happy selling! 📚
-
-
-

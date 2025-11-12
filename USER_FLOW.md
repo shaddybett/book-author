@@ -188,17 +188,20 @@ This document visualizes the entire purchase journey from browsing to delivery c
 ## 📝 Step-by-Step Breakdown
 
 ### **Step 1: Browse Books**
+
 - User lands on homepage
 - Scrolls to Books section
 - Sees beautiful book cards with covers, descriptions, prices
 - Hovers over a book → "Order Now" button appears on cover
 
 ### **Step 2: Initiate Purchase**
+
 - User clicks "Order Now" or "Purchase Book"
 - React Router navigates to `/order-summary`
 - Book data is passed via location state
 
 ### **Step 3: Review Order**
+
 - **Left side**: Book cover image
 - **Right side**: Complete book details
 - **Price section**: Shows book price + delivery fee + total
@@ -206,6 +209,7 @@ This document visualizes the entire purchase journey from browsing to delivery c
 - **Form**: Collects customer details
 
 ### **Step 4: Enter Details**
+
 - User fills in:
   - Full Name (required)
   - Email Address (required, validated)
@@ -214,12 +218,14 @@ This document visualizes the entire purchase journey from browsing to delivery c
 - Clicks "Continue to Payment"
 
 ### **Step 5: Confirm Payment**
+
 - Green banner: "✓ Your details have been saved"
 - "Confirm Purchase" button appears
 - User can still "Edit Details" if needed
 - Clicks "Confirm Purchase"
 
 ### **Step 6: Paystack Payment**
+
 - Paystack modal opens (secure iframe)
 - Shows amount to pay
 - Multiple payment options:
@@ -231,12 +237,14 @@ This document visualizes the entire purchase journey from browsing to delivery c
 - Paystack processes securely
 
 ### **Step 7: Payment Confirmation**
+
 - **Success**: Green success banner appears
 - **Shows**: "Payment Successful! Redirecting to WhatsApp..."
 - **2-second countdown** before redirect
 - **Failed**: Red error banner, user can retry
 
 ### **Step 8: WhatsApp Redirect**
+
 - Browser opens WhatsApp (app or web)
 - Pre-filled message with:
   - Book title
@@ -246,6 +254,7 @@ This document visualizes the entire purchase journey from browsing to delivery c
 - User just needs to click "Send"
 
 ### **Step 9: Order Fulfillment**
+
 - Author receives WhatsApp message
 - Can verify payment in Paystack Dashboard
 - Replies with delivery instructions
@@ -256,21 +265,25 @@ This document visualizes the entire purchase journey from browsing to delivery c
 ## 🔄 Alternative Paths
 
 ### User Cancels Payment
+
 ```
 Order Summary → Click "Cancel" → Return to Home/#books
 ```
 
 ### User Closes Paystack Modal
+
 ```
 Paystack Modal → Click X or "Cancel" → Red error banner → Can retry
 ```
 
 ### User Wants to Change Details
+
 ```
 Payment Stage → Click "Edit Details" → Form reappears → Can modify
 ```
 
 ### No Book Selected (Direct URL Access)
+
 ```
 /order-summary (no state) → Error page → "Back to Books" button
 ```
@@ -280,6 +293,7 @@ Payment Stage → Click "Edit Details" → Form reappears → Can modify
 ## 💡 Key Features in Flow
 
 ### 🎨 **UI/UX Excellence**
+
 - ✅ Smooth page transitions
 - ✅ Loading states
 - ✅ Clear status messages
@@ -287,18 +301,21 @@ Payment Stage → Click "Edit Details" → Form reappears → Can modify
 - ✅ Mobile responsive
 
 ### 🔒 **Security**
+
 - ✅ Paystack PCI-DSS compliant
 - ✅ Secure payment modal
 - ✅ No card details touch your server
 - ✅ HTTPS required for production
 
 ### 📱 **Mobile Experience**
+
 - ✅ Responsive layouts
 - ✅ Touch-friendly buttons
 - ✅ Mobile payment methods (M-Pesa)
 - ✅ WhatsApp integration (native app)
 
 ### ⚡ **Performance**
+
 - ✅ Fast page loads
 - ✅ Instant navigation
 - ✅ Optimized images
@@ -309,6 +326,7 @@ Payment Stage → Click "Edit Details" → Form reappears → Can modify
 ## 🎯 Success Metrics
 
 After implementation, you can track:
+
 - 📊 Orders initiated (visitors to /order-summary)
 - 💳 Payments completed (Paystack Dashboard)
 - 📱 WhatsApp messages received
@@ -319,8 +337,10 @@ After implementation, you can track:
 ## 🚀 Ready to Test!
 
 Your development server is running. Visit:
+
 ```
-http://localhost:5173
+
+https://www.mercylangat.com
 ```
 
 Test the complete flow with Paystack test cards!
@@ -328,6 +348,3 @@ Test the complete flow with Paystack test cards!
 ---
 
 **Questions?** See `PAYMENT_SETUP.md` and `IMPLEMENTATION_SUMMARY.md`
-
-
-
