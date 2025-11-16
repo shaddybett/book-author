@@ -64,7 +64,7 @@ export const BOOKS = [
     isbn: "B0EXAMPLE",
     publishedYear: "2024",
     rating: 4.8,
-    pages: 220,
+    pages: 125,
     awards: ["Marriage & Relationships Bestseller", "Inspirational Read"],
     excerpt: "Those who know me personally might be wondering; 'What does she know about marriage? Only ten years into it, and she's just 32! What could she possibly have learned in such a short time?' Well, I understand ten years may not be a lifetime, but it is long enough to see patterns, to experience highs and lows, and to learn lessons that can't be taught in theory..."
   },

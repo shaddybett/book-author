@@ -137,7 +137,7 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
   const handleOrderClick = () => {
     const phoneNumber = '254713315219'; // Mercy Langat's WhatsApp
     const message = encodeURIComponent(
-      `Hi Mercy! 👋\n\nI'm interested in purchasing:\n📚 "${book.title}"\n\nCould you please provide:\n• Availability\n• Price\n• Delivery options\n\nThank you!`
+      `Hi Mercy! \n\nI'm interested in purchasing:\n• "${book.title}"\n\nCould you please provide:\n• Availability\n• Price\n• Delivery options\n\nThank you!`
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
