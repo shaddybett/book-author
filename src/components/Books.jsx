@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { BOOKS } from '../constants/index';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiExternalLink, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter, FiShoppingCart } from 'react-icons/fi';
+import { FiMessageCircle, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -132,10 +131,16 @@ function Books() {
 
 function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
   const [isHovered, setIsHovered] = useState(false);
-  const navigate = useNavigate();
 
+  // Temporary: Redirect to WhatsApp until Paybill is ready
+  // TODO: Switch back to payment page when Paybill is ready
   const handleOrderClick = () => {
-    navigate('/order-summary', { state: { book } });
+    const phoneNumber = '254713315219'; // Mercy Langat's WhatsApp
+    const message = encodeURIComponent(
+      `Hi Mercy! \n\nI'm interested in purchasing:\n• "${book.title}"\n\nCould you please provide:\n• Availability\n• Price\n• Delivery options\n\nThank you!`
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   const renderStars = (rating) => {
@@ -210,12 +215,12 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                 onClick={handleOrderClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/90 hover:bg-white text-stone-800 
+                className="bg-green-500/90 hover:bg-green-500 text-white 
                          px-6 py-3 rounded-full transition-colors duration-200
                          shadow-lg hover:shadow-xl flex items-center gap-2 font-semibold"
               >
-                <FiExternalLink className="w-5 h-5" />
-                <span>Order Now</span>
+                <FiMessageCircle className="w-5 h-5" />
+                <span>Chat on WhatsApp</span>
               </motion.button>
             </div>
           </div>
@@ -345,13 +350,13 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
               whileTap={{ scale: 0.98 }}
-              className="bg-white hover:bg-stone-100 text-stone-800 
+              className="bg-green-500 hover:bg-green-600 text-white 
                        px-6 py-3 rounded-full font-semibold
                        transition-colors duration-200 flex items-center gap-2
                        shadow-lg"
             >
-              <FiExternalLink className="w-4 h-4" />
-              Purchase Book
+              <FiMessageCircle className="w-4 h-4" />
+              Chat on WhatsApp
             </motion.button>
             
             <motion.button

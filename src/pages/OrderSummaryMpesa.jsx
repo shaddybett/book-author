@@ -109,7 +109,7 @@ Please send me delivery details.`
 
   // Parse price from string (e.g., "Ksh 800" to 800)
   const bookPrice = parseFloat(book.price.replace(/[^0-9.]/g, ''));
-  const deliveryFee = 200; // KES 200 delivery
+  const deliveryFee = 0; // KES 200 delivery
   const totalAmount = bookPrice + deliveryFee;
 
   const handleMpesaPayment = async () => {

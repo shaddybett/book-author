@@ -71,3 +71,5 @@ export const isValidKenyanPhone = (phone) => {
   return /^254[17]\d{8}$/.test(formatted);
 };
 
+
+

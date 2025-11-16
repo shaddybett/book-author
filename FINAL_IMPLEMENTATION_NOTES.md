@@ -7,6 +7,7 @@
 ## 📦 What's Been Done
 
 ### ✅ Backend (100% Complete)
+
 - Express server with M-Pesa Daraja API integration
 - STK Push payment initiation
 - Callback handling
@@ -15,6 +16,7 @@
 - Complete error handling
 
 ### ✅ Frontend (100% Complete)
+
 - Order summary page with M-Pesa integration
 - Real-time payment status updates
 - Beautiful, responsive UI
@@ -23,6 +25,7 @@
 - React Router integration
 
 ### ✅ Documentation (100% Complete)
+
 - Complete setup guide (MPESA_SETUP_GUIDE.md)
 - Quick start guide (MPESA_QUICK_START.md)
 - Implementation summary
@@ -33,6 +36,7 @@
 ## 🚀 Quick Start Commands
 
 ### 1. Setup Backend
+
 ```bash
 cd server
 npm install
@@ -41,12 +45,14 @@ cp env.example .env
 ```
 
 ### 2. Setup Frontend
+
 ```bash
 cd ..
 npm install --legacy-peer-deps # Already done
 ```
 
 ### 3. Run Development
+
 ```bash
 # Terminal 1 - Backend
 cd server && npm run dev
@@ -128,12 +134,15 @@ paza/
 ## 🧪 Testing
 
 ### Sandbox Test Numbers:
+
 - **Success**: 254708374149
 - **Insufficient Funds**: 254700000000
 
 ### Test Flow:
+
 1. Start servers
-2. Navigate to http://localhost:5173
+2. Navigate to
+   https://www.mercylangat.com
 3. Click any book → "Order Now"
 4. Fill form with test number
 5. Click "Pay with M-Pesa"
@@ -144,7 +153,9 @@ paza/
 ## 🌐 Production Deployment
 
 ### Backend Deployment Options:
+
 1. **Railway** (Recommended)
+
    ```bash
    npm i -g @railway/cli
    railway login
@@ -156,7 +167,9 @@ paza/
 4. **DigitalOcean**: https://digitalocean.com
 
 ### Frontend Deployment:
+
 1. **Vercel** (Recommended)
+
    ```bash
    vercel --prod
    ```
@@ -167,6 +180,7 @@ paza/
    ```
 
 ### Important:
+
 - Update `FRONTEND_URL` in backend `.env`
 - Update `VITE_API_URL` in frontend `.env`
 - Update `MPESA_CALLBACK_URL` to production URL
@@ -177,6 +191,7 @@ paza/
 ## 🔐 Environment Variables Checklist
 
 ### Backend (.env):
+
 - [ ] MPESA_CONSUMER_KEY
 - [ ] MPESA_CONSUMER_SECRET
 - [ ] MPESA_PASSKEY
@@ -187,38 +202,44 @@ paza/
 - [ ] PORT
 
 ### Frontend (.env):
+
 - [ ] VITE_API_URL
 
 ---
 
 ## 📊 API Endpoints
 
-| Endpoint | Method | Purpose |
-|----------|--------|---------|
-| `/api/mpesa/stkpush` | POST | Initiate payment |
-| `/api/mpesa/callback` | POST | M-Pesa callback |
-| `/api/mpesa/transaction/:id` | GET | Check status |
-| `/api/mpesa/query` | POST | Query M-Pesa |
-| `/health` | GET | Server health check |
+| Endpoint                     | Method | Purpose             |
+| ---------------------------- | ------ | ------------------- |
+| `/api/mpesa/stkpush`         | POST   | Initiate payment    |
+| `/api/mpesa/callback`        | POST   | M-Pesa callback     |
+| `/api/mpesa/transaction/:id` | GET    | Check status        |
+| `/api/mpesa/query`           | POST   | Query M-Pesa        |
+| `/health`                    | GET    | Server health check |
 
 ---
 
 ## 🐛 Common Issues & Solutions
 
 ### Issue: "Invalid Access Token"
+
 **Solution**: Check Consumer Key & Secret in .env
 
 ### Issue: "Callback not received"
+
 **Solution**: Use ngrok for local testing
+
 ```bash
 ngrok http 5000
 # Update MPESA_CALLBACK_URL with ngrok URL
 ```
 
 ### Issue: "Phone number format error"
+
 **Solution**: Use format 254XXXXXXXXX (no + or spaces)
 
 ### Issue: "Build errors"
+
 **Solution**: Run `npm install --legacy-peer-deps`
 
 ---
@@ -226,11 +247,13 @@ ngrok http 5000
 ## 💰 Cost Breakdown
 
 ### M-Pesa Fees (Check with Safaricom):
+
 - Transaction fee: ~1-2% per transaction
 - Monthly subscription: Varies by account type
 - No setup fees for developers
 
 ### Hosting (Estimated):
+
 - Backend (Railway/Render): $5-10/month
 - Frontend (Vercel/Netlify): FREE
 - Domain: $10-15/year
@@ -240,11 +263,13 @@ ngrok http 5000
 ## 📞 Support & Resources
 
 ### Safaricom Daraja:
+
 - Portal: https://developer.safaricom.co.ke/
 - Support: apisupport@safaricom.co.ke
 - Documentation: https://developer.safaricom.co.ke/Documentation
 
 ### Your Documentation:
+
 - Setup Guide: `MPESA_SETUP_GUIDE.md`
 - Quick Start: `MPESA_QUICK_START.md`
 - Implementation Details: `MPESA_IMPLEMENTATION_SUMMARY.md`
@@ -254,26 +279,31 @@ ngrok http 5000
 ## 🎯 Next Steps for You
 
 ### 1. Get Daraja Credentials (15 mins)
+
 - [ ] Register at https://developer.safaricom.co.ke/
 - [ ] Create app
 - [ ] Get Consumer Key, Secret, Passkey
 
 ### 2. Configure Environment (5 mins)
+
 - [ ] Copy env.example to .env
 - [ ] Add your credentials
 - [ ] Update WhatsApp number if needed
 
 ### 3. Test in Sandbox (10 mins)
+
 - [ ] Start backend: `cd server && npm run dev`
 - [ ] Start frontend: `npm run dev`
 - [ ] Test with 254708374149
 
 ### 4. Setup Ngrok (Optional - for local testing)
+
 - [ ] Install ngrok
 - [ ] Run `ngrok http 5000`
 - [ ] Update callback URL in .env
 
 ### 5. Go to Production (When ready)
+
 - [ ] Apply for production credentials
 - [ ] Deploy backend
 - [ ] Deploy frontend
@@ -285,6 +315,7 @@ ngrok http 5000
 ## ✨ Features Implemented
 
 ### Payment Features:
+
 ✅ STK Push (Lipa Na M-Pesa Online)
 ✅ Real-time payment status
 ✅ Automatic retry on failure
@@ -292,6 +323,7 @@ ngrok http 5000
 ✅ Payment confirmation
 
 ### User Experience:
+
 ✅ Beautiful, responsive UI
 ✅ Step-by-step process
 ✅ Real-time feedback
@@ -300,6 +332,7 @@ ngrok http 5000
 ✅ Mobile-first design
 
 ### Security:
+
 ✅ Environment variables
 ✅ CORS protection
 ✅ Input validation
@@ -322,12 +355,14 @@ ngrok http 5000
 ## 📈 Expected Results
 
 ### User Benefits:
+
 - **Faster Checkout**: 30 seconds vs 2-3 minutes
 - **Familiar Process**: Everyone knows M-Pesa
 - **No Card Required**: Pay with phone
 - **Instant Confirmation**: Real-time updates
 
 ### Business Benefits:
+
 - **Higher Conversion**: 2-3x more completed payments
 - **Lower Fees**: Save on transaction costs
 - **Instant Settlement**: Money in account immediately
@@ -338,11 +373,13 @@ ngrok http 5000
 ## 🎓 Learning Resources
 
 ### M-Pesa Integration:
+
 - Official Docs: https://developer.safaricom.co.ke/Documentation
 - YouTube Tutorials: Search "M-Pesa Daraja API"
 - GitHub Examples: Search "mpesa daraja nodejs"
 
 ### React & Node.js:
+
 - React Docs: https://react.dev
 - Node.js Docs: https://nodejs.org/docs
 - Express Docs: https://expressjs.com
@@ -352,6 +389,7 @@ ngrok http 5000
 ## 🔄 Maintenance
 
 ### Regular Tasks:
+
 - [ ] Monitor transaction logs
 - [ ] Check error rates
 - [ ] Update dependencies monthly
@@ -359,6 +397,7 @@ ngrok http 5000
 - [ ] Review Safaricom updates
 
 ### Security:
+
 - [ ] Rotate API keys quarterly
 - [ ] Monitor for unusual activity
 - [ ] Keep dependencies updated
@@ -369,11 +408,13 @@ ngrok http 5000
 ## 📝 Notes for Mercy Langat
 
 ### Your Contact Info (Updated):
+
 - Name: **Mercy Langat**
 - WhatsApp: **+254 713 315 219**
 - Email: hello@mercylangat.com
 
 ### To Get Started:
+
 1. Create Daraja account (your business email)
 2. Provide business documents to Safaricom
 3. Get Till/Paybill number if you don't have one
@@ -381,6 +422,7 @@ ngrok http 5000
 5. We'll help you configure everything!
 
 ### Payment Flow for Your Customers:
+
 1. They select a book
 2. Enter phone number
 3. Get M-Pesa prompt
@@ -393,6 +435,7 @@ ngrok http 5000
 ## 🎉 Final Checklist
 
 ### Development:
+
 - [x] Backend API created
 - [x] Frontend UI created
 - [x] Documentation written
@@ -401,6 +444,7 @@ ngrok http 5000
 - [x] Routes configured
 
 ### Your Tasks:
+
 - [ ] Get Daraja credentials
 - [ ] Configure .env file
 - [ ] Test in sandbox
@@ -428,4 +472,5 @@ Everything is set up and ready to go. Once you get your Daraja credentials:
 **Questions?** Check the documentation or contact Safaricom support!
 
 🎊 **Congratulations on your new M-Pesa payment integration!** 🎊
+
 

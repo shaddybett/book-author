@@ -9,6 +9,7 @@ Complete step-by-step guide to set up M-Pesa payments for Mercy Langat's book we
 This integration allows customers to pay for books using M-Pesa (Kenya's mobile money service) through Safaricom's Daraja API. The payment flow uses STK Push (Lipa Na M-Pesa Online).
 
 ### Payment Flow:
+
 1. Customer selects a book
 2. Enters their details (name, email, phone)
 3. Initiates M-Pesa payment
@@ -22,6 +23,7 @@ This integration allows customers to pay for books using M-Pesa (Kenya's mobile 
 ## 📋 Prerequisites
 
 Before starting, you need:
+
 - ✅ Node.js installed (v16 or higher)
 - ✅ Safaricom Daraja API account
 - ✅ M-Pesa Paybill/Till Number
@@ -60,12 +62,14 @@ Before starting, you need:
 After creating the app, you'll see:
 
 **For SANDBOX (Testing)**:
+
 - Consumer Key: `xxxxxxxxxxxxxxxxxxxxxxx`
 - Consumer Secret: `xxxxxxxxxxxxxxxxxxxxxxx`
 - Passkey: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 - Test Shortcode: `174379`
 
 **For PRODUCTION (Live)**:
+
 - You'll need to apply for production credentials
 - Follow Safaricom's Go-Live process
 - Get your actual Till/Paybill number
@@ -82,6 +86,7 @@ npm install
 ```
 
 This installs:
+
 - `express` - Web framework
 - `axios` - HTTP client for API calls
 - `cors` - Enable cross-origin requests
@@ -124,17 +129,20 @@ PORT=5000
 NODE_ENV=development
 
 # Frontend URL
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=
+https://www.mercylangat.com
 ```
 
 ### Important Notes:
 
 **Callback URLs**:
+
 - For local testing, use ngrok or a similar tunnel service
 - For production, use your actual domain
 - Must be HTTPS in production
 
 **Passkey**:
+
 - Sandbox passkey is usually provided by Safaricom
 - Production passkey: Contact Safaricom support
 
@@ -150,6 +158,7 @@ npm run dev
 ```
 
 You should see:
+
 ```
 🚀 M-Pesa Payment Server running on port 5000
 📱 Environment: sandbox
@@ -174,6 +183,7 @@ npm install
 ```
 
 Additional packages needed:
+
 ```bash
 npm install react-router-dom axios
 ```
@@ -187,6 +197,7 @@ VITE_API_URL=http://localhost:5000
 ```
 
 For production:
+
 ```env
 VITE_API_URL=https://your-api-domain.com
 ```
@@ -200,13 +211,14 @@ VITE_API_URL=https://your-api-domain.com
 Safaricom provides test numbers for sandbox:
 
 | Phone Number | Behavior |
-|--------------|----------|
-| 254708374149 | Success |
-| 254700000000 | Failure |
+| ------------ | -------- |
+| 254708374149 | Success  |
+| 254700000000 | Failure  |
 
 ### 6.2 Test Payment Flow
 
 1. **Start both servers**:
+
    ```bash
    # Terminal 1 - Backend
    cd server && npm run dev
@@ -216,7 +228,9 @@ Safaricom provides test numbers for sandbox:
    ```
 
 2. **Test the flow**:
-   - Open browser: `http://localhost:5173`
+
+   - Open browser: `
+https://www.mercylangat.com`
    - Click on any book
    - Click "Order Now"
    - Fill in details (use test phone number)
@@ -240,6 +254,7 @@ Safaricom provides test numbers for sandbox:
 ### 6.3 Debugging
 
 Check server logs for:
+
 ```
 M-Pesa Callback Received: {
   "Body": {
@@ -294,6 +309,7 @@ Restart your server after updating.
 ### 8.1 Get Production Credentials
 
 1. Complete Safaricom's Go-Live checklist:
+
    - Business registration documents
    - Till/Paybill number
    - Integration testing completion
@@ -331,12 +347,14 @@ NODE_ENV=production
 ### 8.3 Deploy Backend
 
 Deploy to services like:
+
 - **Railway**: https://railway.app
 - **Render**: https://render.com
 - **Heroku**: https://heroku.com
 - **DigitalOcean**: https://digitalocean.com
 
 Example Railway deployment:
+
 ```bash
 # Install Railway CLI
 npm i -g @railway/cli
@@ -351,12 +369,14 @@ railway up
 ### 8.4 Deploy Frontend
 
 Deploy to:
+
 - **Vercel**: `vercel --prod`
 - **Netlify**: `netlify deploy --prod`
 - **GitHub Pages**
 - **Firebase Hosting**
 
 Update frontend `.env`:
+
 ```env
 VITE_API_URL=https://your-backend-domain.com
 ```
@@ -368,12 +388,14 @@ VITE_API_URL=https://your-backend-domain.com
 ### 9.1 Environment Variables
 
 ✅ **DO:**
+
 - Keep `.env` files out of version control
 - Use different credentials for dev/prod
 - Rotate keys regularly
 - Use secrets management (AWS Secrets Manager, etc.)
 
 ❌ **DON'T:**
+
 - Commit `.env` files to Git
 - Share credentials in plain text
 - Use production keys in development
@@ -382,14 +404,14 @@ VITE_API_URL=https://your-backend-domain.com
 
 ```javascript
 // Add rate limiting
-import rateLimit from 'express-rate-limit';
+import rateLimit from "express-rate-limit";
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10 // 10 requests per window
+  max: 10, // 10 requests per window
 });
 
-app.use('/api/mpesa', limiter);
+app.use("/api/mpesa", limiter);
 ```
 
 ### 9.3 Input Validation
@@ -409,15 +431,15 @@ const isValidPhone = (phone) => {
 
 ```javascript
 // Use Winston or similar
-import winston from 'winston';
+import winston from "winston";
 
 const logger = winston.createLogger({
-  level: 'info',
+  level: "info",
   format: winston.format.json(),
   transports: [
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
+    new winston.transports.File({ filename: "error.log", level: "error" }),
+    new winston.transports.File({ filename: "combined.log" }),
+  ],
 });
 ```
 
@@ -435,7 +457,7 @@ const transactionSchema = new Schema({
   phoneNumber: String,
   status: String,
   mpesaReceiptNumber: String,
-  timestamp: Date
+  timestamp: Date,
 });
 ```
 
@@ -446,12 +468,14 @@ const transactionSchema = new Schema({
 ### Common Issues:
 
 **1. "Invalid Access Token"**
+
 ```
 Solution: Check your Consumer Key and Secret
 Verify environment (sandbox vs production)
 ```
 
 **2. "Request failed with status code 400"**
+
 ```
 Solution: Check phone number format (254XXXXXXXXX)
 Verify all required fields are present
@@ -459,6 +483,7 @@ Check amount is an integer
 ```
 
 **3. "Timeout" or "No response"**
+
 ```
 Solution: Check callback URL is accessible
 Verify ngrok is running (for local testing)
@@ -466,6 +491,7 @@ Check firewall settings
 ```
 
 **4. "Invalid Shortcode"**
+
 ```
 Solution: Use correct shortcode for environment
 Sandbox: 174379
@@ -473,6 +499,7 @@ Production: Your actual Till/Paybill
 ```
 
 **5. "Passkey Error"**
+
 ```
 Solution: Verify passkey is correct
 Check no extra spaces or characters
@@ -485,8 +512,8 @@ Enable verbose logging:
 
 ```javascript
 // In mpesaController.js
-console.log('Request Data:', JSON.stringify(stkPushData, null, 2));
-console.log('Response:', JSON.stringify(response.data, null, 2));
+console.log("Request Data:", JSON.stringify(stkPushData, null, 2));
+console.log("Response:", JSON.stringify(response.data, null, 2));
 ```
 
 ---
@@ -494,14 +521,17 @@ console.log('Response:', JSON.stringify(response.data, null, 2));
 ## 📞 Support & Resources
 
 ### Official Documentation:
+
 - Daraja API Docs: https://developer.safaricom.co.ke/Documentation
 - API Reference: https://developer.safaricom.co.ke/APIs
 
 ### Safaricom Support:
+
 - Email: apisupport@safaricom.co.ke
 - Portal: https://developer.safaricom.co.ke/support
 
 ### Community:
+
 - Stack Overflow: Tag `mpesa` or `daraja-api`
 - GitHub: Search for M-Pesa integration examples
 
@@ -512,6 +542,7 @@ console.log('Response:', JSON.stringify(response.data, null, 2));
 Use this checklist to ensure everything is set up:
 
 ### Backend Setup:
+
 - [ ] Daraja account created
 - [ ] App created on portal
 - [ ] Credentials obtained
@@ -521,6 +552,7 @@ Use this checklist to ensure everything is set up:
 - [ ] Test endpoint works
 
 ### Frontend Setup:
+
 - [ ] Dependencies installed
 - [ ] React Router configured
 - [ ] OrderSummary page created
@@ -529,6 +561,7 @@ Use this checklist to ensure everything is set up:
 - [ ] Test flow works
 
 ### Testing:
+
 - [ ] Sandbox credentials work
 - [ ] STK Push initiated successfully
 - [ ] Callback received
@@ -536,6 +569,7 @@ Use this checklist to ensure everything is set up:
 - [ ] WhatsApp redirect works
 
 ### Production:
+
 - [ ] Production credentials obtained
 - [ ] Backend deployed
 - [ ] Frontend deployed
@@ -562,4 +596,5 @@ For any issues or questions, refer to the troubleshooting section or contact Saf
 **Last Updated**: November 2025
 **Version**: 1.0.0
 **Author**: Developed for Mercy Langat Books
+
 
