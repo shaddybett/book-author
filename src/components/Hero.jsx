@@ -2,7 +2,7 @@ import React from 'react'
 import authorPic from "../assets/prof1.webp"
 import { HERO_CONTENT } from '../constants/index'
 import { motion } from "framer-motion"
-import { FiBookOpen, FiAward, FiUsers } from 'react-icons/fi'
+import { FiBookOpen, FiAward, FiUsers, FiDownload } from 'react-icons/fi'
 
 const containerVariants = {
   hidden: {
@@ -223,6 +223,21 @@ function Hero() {
                 whileTap={{ scale: 0.95 }}
               >
                 Join Newsletter
+              </motion.a>
+
+              <motion.a
+                href="/resume.pdf"
+                download
+                className='border-2 border-stone-400 hover:border-white
+                        rounded-full px-8 py-4 text-stone-300 hover:text-white
+                        font-semibold text-center
+                        transition-colors duration-300
+                        flex items-center justify-center gap-2'
+                whileHover={buttonHover}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiDownload className="w-5 h-5" />
+                Download Resume
               </motion.a>
             </motion.div>
           </motion.div>

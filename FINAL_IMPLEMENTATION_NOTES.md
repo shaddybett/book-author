@@ -472,3 +472,5 @@ Everything is set up and ready to go. Once you get your Daraja credentials:
 **Questions?** Check the documentation or contact Safaricom support!
 
 🎊 **Congratulations on your new M-Pesa payment integration!** 🎊
+
+
