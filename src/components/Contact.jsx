@@ -163,102 +163,75 @@ const Footer = () => {
         </div>
 
         {/* Developer Credit */}
-
-<div className="mt-8 pt-6 border-t border-stone-800/50">
-  <div className="flex flex-col items-center gap-5">
-    {/* Main Credit Line */}
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
-      <span className="flex items-center gap-2 text-stone-500 text-sm">
-        <FiCode className="text-stone-600 text-base" />
-        <span>Designed & Developed by</span>
-      </span>
-      <a
-        href="https://kipkorir.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-stone-200 hover:text-white transition-colors duration-200 font-semibold text-sm hover:underline decoration-stone-500 underline-offset-4"
-      >
-        Shadrack Bett
-      </a>
+            <div className="mt-8 pt-6 border-t border-stone-800/50">
+      <div className="flex flex-col items-center gap-3 sm:gap-5">
+        {/* Main Credit Line */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
+          <span className="flex items-center gap-2 text-stone-500 text-sm">
+            <FiCode className="text-stone-600 text-base" />
+            <span>Designed & Developed by</span>
+          </span>
+          <a
+            href="https://kipkorir.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-stone-200 hover:text-white transition-colors duration-200 font-semibold text-base hover:underline decoration-stone-500 underline-offset-4"
+          >
+            Shadrack Bett
+          </a>
+        </div>
+        
+        {/* Contact Links - Compact Mobile, Spacious Desktop */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full max-w-lg px-4 sm:px-0">
+          <a
+            href="https://kipkorir.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
+                     px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
+                     transition-all duration-300 group flex items-center justify-center gap-2 sm:gap-2.5 flex-1 sm:flex-initial"
+            aria-label="Portfolio"
+          >
+            <FiCode className="text-stone-400 group-hover:text-white transition-colors text-sm sm:text-base" />
+            <span className="text-stone-300 group-hover:text-white text-xs sm:text-sm font-medium">Portfolio</span>
+          </a>
+          
+          <a
+            href="mailto:shadrack.bett.92@gmail.com"
+            className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
+                     px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
+                     transition-all duration-300 group flex items-center justify-center gap-2 sm:gap-2.5 flex-1 sm:flex-initial"
+            aria-label="Email"
+          >
+            <FiMail className="text-stone-400 group-hover:text-white transition-colors text-sm sm:text-base" />
+            <span className="text-stone-300 group-hover:text-white text-xs sm:text-sm font-medium">Email</span>
+          </a>
+          
+          <a
+            href="https://wa.me/254769465418?text=Hi%20Shadrack!%20I%20saw%20your%20work%20on%20Mercy%20Langat's%20website%20and%20I'm%20interested%20in%20discussing%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm 
+                     border border-green-600/40 px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg 
+                     hover:from-green-500/30 hover:to-green-600/30 hover:border-green-500/60
+                     transition-all duration-300 group flex items-center justify-center gap-2 sm:gap-2.5 w-full sm:w-auto"
+            aria-label="WhatsApp"
+          >
+            <FiMessageCircle className="text-green-400 group-hover:text-green-300 transition-colors text-sm sm:text-base" />
+            <span className="text-green-300 group-hover:text-green-200 text-xs sm:text-sm font-medium">WhatsApp</span>
+          </a>
+        </div>
+        
+        {/* Call to Action with Badge */}
+        <div className="flex items-center justify-center gap-2.5 text-stone-500 text-xs text-center px-4">
+          <span className="relative flex h-2 w-2 flex-shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          <span className="italic">Available for freelance projects and collaborations</span>
+        </div>
+      </div>
     </div>
-    
-    {/* Contact Links - Improved Card Style */}
-    <div className="flex flex-wrap items-center justify-center gap-3">
-      <a
-        href="https://kipkorir.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
-                 px-4 py-2 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
-                 transition-all duration-300 group flex items-center gap-2"
-        aria-label="Portfolio"
-      >
-        <FiCode className="text-stone-400 group-hover:text-white transition-colors text-sm" />
-        <span className="text-stone-300 group-hover:text-white text-sm">Portfolio</span>
-      </a>
-      
-      <a
-        href="https://github.com/shaddybett"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
-                 px-4 py-2 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
-                 transition-all duration-300 group flex items-center gap-2"
-        aria-label="GitHub"
-      >
-        <FiGithub className="text-stone-400 group-hover:text-white transition-colors text-sm" />
-        <span className="text-stone-300 group-hover:text-white text-sm">GitHub</span>
-      </a>
-      
-      <a
-        href="https://linkedin.com/in/sbett/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
-                 px-4 py-2 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
-                 transition-all duration-300 group flex items-center gap-2"
-        aria-label="LinkedIn"
-      >
-        <FiLinkedin className="text-stone-400 group-hover:text-white transition-colors text-sm" />
-        <span className="text-stone-300 group-hover:text-white text-sm">LinkedIn</span>
-      </a>
-      
-      <a
-        href="mailto:shadrack.bett.92@gmail.com"
-        className="bg-stone-800/40 backdrop-blur-sm border border-stone-700/40 
-                 px-4 py-2 rounded-lg hover:bg-stone-700/60 hover:border-stone-600/60
-                 transition-all duration-300 group flex items-center gap-2"
-        aria-label="Email"
-      >
-        <FiMail className="text-stone-400 group-hover:text-white transition-colors text-sm" />
-        <span className="text-stone-300 group-hover:text-white text-sm">Email</span>
-      </a>
-      
-      <a
-        href="https://wa.me/254769465418?text=Hi%20Shadrack!%20I%20saw%20your%20work%20on%20Mercy%20Langat's%20website%20and%20I'm%20interested%20in%20discussing%20a%20project."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm 
-                 border border-green-600/40 px-4 py-2 rounded-lg 
-                 hover:from-green-500/30 hover:to-green-600/30 hover:border-green-500/60
-                 transition-all duration-300 group flex items-center gap-2"
-        aria-label="WhatsApp"
-      >
-        <FiMessageCircle className="text-green-400 group-hover:text-green-300 transition-colors text-sm" />
-        <span className="text-green-300 group-hover:text-green-200 text-sm font-medium">WhatsApp</span>
-      </a>
-    </div>
-    
-    {/* Call to Action with Badge */}
-    <div className="flex items-center gap-2 text-stone-500 text-xs">
-      <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-      </span>
-      <span className="italic">Available for freelance projects and collaborations</span>
-    </div>
-  </div>
-</div>
 
         {/* Decorative elements */}
         <div className="absolute bottom-0 left-0 w-full h-32 
