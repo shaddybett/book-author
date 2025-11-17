@@ -318,7 +318,7 @@ const Footer = () => {
         <FiArrowUp className="text-stone-200 text-lg" />
       </button>
 
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-8 sm:py-16">
         {/* Main footer content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           
@@ -440,7 +440,7 @@ const Footer = () => {
         </div>
 
         {/* Developer Credit */}
-        <div className="mt-8 pt-6 border-t border-stone-800/50">
+        <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 pb-2 sm:pb-0 border-t border-stone-800/50">
           <div className="flex flex-col items-center gap-4 sm:gap-5">
             {/* Main Credit Line */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
