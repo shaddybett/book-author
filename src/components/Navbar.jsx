@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FaInstagram, FaFacebook } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
 import { motion, AnimatePresence } from "framer-motion"
-import logo from "../assets/M/M-1.png"
+import logo from "../assets/sb62.png"
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -84,43 +84,23 @@ function Navbar() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo & Brand */}
-          <motion.div 
-            className="flex items-center gap-3"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <button 
-              onClick={scrollToTop} 
-              aria-label="Home"
-              className="relative group flex items-center gap-3"
-            >
-              {/* Logo with glow effect */}
-              <div className="relative">
-                <motion.div
-                  className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-stone-400/20 blur-lg"
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileHover={{ scale: 1.3, opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <img 
-                  src={logo} 
-                  className={`relative transition-all duration-300 group-hover:brightness-110 
-                           ${isScrolled ? 'w-14 h-14' : 'w-16 h-16'}
-                           rounded-xl object-cover`}
-                  alt="Mercy Langat Logo"
-                />
-              </div>
-              
-              {/* Brand text - hidden on very small screens */}
-              {/* <div className="hidden sm:block">
-                <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white via-stone-200 to-stone-400 
-                             bg-clip-text text-transparent tracking-tight">
-                  Mercy Langat
-                </h1>
-                <p className="text-xs text-stone-400 tracking-wide">Award-Winning Author</p>
-              </div> */}
-            </button>
-          </motion.div>
+<div className="relative">
+  <motion.div
+    className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-stone-400/20 blur-lg"
+    initial={{ scale: 0, opacity: 0 }}
+    whileHover={{ scale: 1.3, opacity: 1 }}
+    transition={{ duration: 0.3 }}
+  />
+  <div className={`relative transition-all duration-300
+                ${isScrolled ? 'w-14 h-14' : 'w-16 h-16'}
+                flex items-center justify-center`}>
+    <img 
+      src={logo} 
+      className="w-[90%] h-[90%] object-contain group-hover:brightness-110 transition-all duration-300"
+      alt="Mercy Langat Logo"
+    />
+  </div>
+</div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
