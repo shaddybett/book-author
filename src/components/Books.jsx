@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BOOKS } from '../constants/index';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMessageCircle, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
+import { FiShoppingCart, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,6 +40,7 @@ const bookVariants = {
 };
 
 function Books() {
+  const navigate = useNavigate();
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [showExcerpt, setShowExcerpt] = useState({});
   
@@ -47,6 +49,10 @@ function Books() {
   const filteredBooks = selectedGenre === 'All' 
     ? BOOKS 
     : BOOKS.filter(book => book.genre === selectedGenre);
+
+  const handleOrderClick = (book) => {
+    navigate('/order-summary', { state: { book } });
+  };
 
   return (
     <div id="books" className="mt-16">
@@ -110,6 +116,7 @@ function Books() {
               index={index}
               showExcerpt={showExcerpt[book.isbn]}
               setShowExcerpt={(show) => setShowExcerpt(prev => ({...prev, [book.isbn]: show}))}
+              onOrderClick={() => handleOrderClick(book)}
             />
           ))}
         </AnimatePresence>
@@ -129,19 +136,8 @@ function Books() {
   );
 }
 
-function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
+function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
   const [isHovered, setIsHovered] = useState(false);
-
-  // Temporary: Redirect to WhatsApp until Paybill is ready
-  // TODO: Switch back to payment page when Paybill is ready
-  const handleOrderClick = () => {
-    const phoneNumber = '254713315219'; // Mercy Langat's WhatsApp
-    const message = encodeURIComponent(
-      `Hi Mercy! \n\nI'm interested in purchasing:\n• "${book.title}"\n\nCould you please provide:\n• Availability\n• Price\n• Delivery options\n\nThank you!`
-    );
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-  };
 
   const renderStars = (rating) => {
     const stars = [];
@@ -212,15 +208,15 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
             <div className="absolute inset-0 z-20 flex items-center justify-center 
                           opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <motion.button
-                onClick={handleOrderClick}
+                onClick={onOrderClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-500/90 hover:bg-green-500 text-white 
+                className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white 
                          px-6 py-3 rounded-full transition-colors duration-200
                          shadow-lg hover:shadow-xl flex items-center gap-2 font-semibold"
               >
-                <FiMessageCircle className="w-5 h-5" />
-                <span>Chat on WhatsApp</span>
+                <FiShoppingCart className="w-5 h-5" />
+                <span>Order Now</span>
               </motion.button>
             </div>
           </div>
@@ -344,19 +340,19 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt }) {
           {/* Action Links */}
           <div className="flex flex-wrap gap-4 pt-2">
             <motion.button
-              onClick={handleOrderClick}
+              onClick={onOrderClick}
               whileHover={{ 
                 scale: 1.02,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
               whileTap={{ scale: 0.98 }}
-              className="bg-green-500 hover:bg-green-600 text-white 
+              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white 
                        px-6 py-3 rounded-full font-semibold
                        transition-colors duration-200 flex items-center gap-2
                        shadow-lg"
             >
-              <FiMessageCircle className="w-4 h-4" />
-              Chat on WhatsApp
+              <FiShoppingCart className="w-4 h-4" />
+              Order Now
             </motion.button>
             
             <motion.button

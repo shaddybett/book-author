@@ -8,7 +8,7 @@ import Testimonials from './components/Testimonials'
 import WritingGenres from './components/Technologies'
 import Newsletter from './components/Newsletter'
 import Contact from './components/Contact'
-import OrderSummaryMpesa from './pages/OrderSummaryMpesa'
+import OrderSummary from './pages/OrderSummary'
 
 function HomePage() {
   return (
@@ -41,7 +41,7 @@ function App() {
             <HomePage />
           </div>
         } />
-        <Route path="/order-summary" element={<OrderSummaryMpesa />} />
+        <Route path="/order-summary" element={<OrderSummary />} />
       </Routes>
     </div>
   )
