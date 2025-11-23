@@ -73,25 +73,6 @@ export const BOOKS = [
       "Those who know me personally might be wondering: 'What does she know about marriage? Only ten years into it, and she's just 32!' Well, I understand ten years may not be a lifetime, but it is long enough to see patterns, to experience highs and lows, and to learn lessons that can't be taught in theory...",
   },
   {
-    title: "Kiswahili Lugha Yetu",
-    image: book2,
-    description:
-      "Kiswahili Lugha Yetu is a bright and engaging beginner's guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
-    genre: "Children's Educational / Language Learning",
-    price: "1500",
-    purchaseLink:
-      "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
-    isbn: "978-1-234567-891",
-    publishedYear: "2024",
-    rating: 4.9,
-    pages: 64,
-    awards: [
-      "Best Children's Educational Book Nominee 2024",
-      "Readers' Choice Favorite Language Book"
-    ],
-    excerptImage: book2excerpt,
-  },
-    {
     title: "ABC Bible",
     image: abc,
     description:
@@ -109,6 +90,25 @@ export const BOOKS = [
       "Readers' Choice Inspirational Book"
     ],
     excerptImage: abcexcerpt,
+  },
+  {
+    title: "Kiswahili Lugha Yetu",
+    image: book2,
+    description:
+      "Kiswahili Lugha Yetu is a bright and engaging beginner's guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
+    genre: "Children's Educational / Language Learning",
+    price: "1500",
+    purchaseLink:
+      "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
+    isbn: "978-1-234567-891",
+    publishedYear: "2024",
+    rating: 4.9,
+    pages: 64,
+    awards: [
+      "Best Children's Educational Book Nominee 2024",
+      "Readers' Choice Favorite Language Book"
+    ],
+    excerptImage: book2excerpt,
   },
   {
     title: "Itikadi za Kiswahili",

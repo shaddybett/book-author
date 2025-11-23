@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BOOKS } from '../constants/index';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMessageCircle, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
+import { FiMessageCircle, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,12 +41,17 @@ const bookVariants = {
 function Books() {
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [showExcerpt, setShowExcerpt] = useState({});
+  const [showAllBooks, setShowAllBooks] = useState(false);
   
   const genres = ['All', ...new Set(BOOKS.map(book => book.genre))];
   
   const filteredBooks = selectedGenre === 'All' 
     ? BOOKS 
     : BOOKS.filter(book => book.genre === selectedGenre);
+  
+  // Show only first 3 books initially, or all if showAllBooks is true
+  const displayedBooks = showAllBooks ? filteredBooks : filteredBooks.slice(0, 3);
+  const hasMoreBooks = filteredBooks.length > 3;
 
   // Temporary: Redirect to WhatsApp to build customer trust
   // TODO: Switch back to payment page when ready (change handleWhatsAppClick to navigate to /order-summary)
@@ -91,7 +96,10 @@ function Books() {
         {genres.map((genre) => (
           <motion.button
             key={genre}
-            onClick={() => setSelectedGenre(genre)}
+            onClick={() => {
+              setSelectedGenre(genre);
+              setShowAllBooks(false); // Reset to show 3 when genre changes
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={`px-5 py-2.5 rounded-full font-medium text-sm
@@ -114,7 +122,7 @@ function Books() {
         className="space-y-16 lg:space-y-24"
       >
         <AnimatePresence mode="wait">
-          {filteredBooks.map((book, index) => (
+          {displayedBooks.map((book, index) => (
             <BookCard 
               key={book.isbn} 
               book={book} 
@@ -126,6 +134,39 @@ function Books() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* View All Books Button */}
+      {hasMoreBooks && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center mt-12"
+        >
+          <motion.button
+            onClick={() => setShowAllBooks(!showAllBooks)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="group bg-gradient-to-r from-stone-700 to-stone-600 hover:from-stone-600 hover:to-stone-500
+                     text-white px-8 py-4 rounded-full font-semibold text-base
+                     transition-all duration-300 shadow-lg hover:shadow-xl
+                     flex items-center gap-2 border border-stone-500/50 hover:border-stone-400/50"
+          >
+            {showAllBooks ? (
+              <>
+                <span>Show Less</span>
+                <FiChevronUp className="w-5 h-5 group-hover:translate-y-[-2px] transition-transform" />
+              </>
+            ) : (
+              <>
+                <span>View All Books</span>
+                <FiChevronDown className="w-5 h-5 group-hover:translate-y-[2px] transition-transform" />
+              </>
+            )}
+          </motion.button>
+        </motion.div>
+      )}
 
       {/* Bottom accent */}
       <motion.div
