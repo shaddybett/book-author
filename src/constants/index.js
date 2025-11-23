@@ -3,7 +3,7 @@ import book4 from "../assets/projects/vows.webp";
 // Children's books
 import book1 from "../assets/projects/itikadi.webp";
 import abc from "../assets/projects/abc.webp";
-import book2 from "../assets/projects/kiswahili.webp";
+import book2 from "../assets/projects/kiswahili.png";
 import book1excerpt from "../assets/projects/book1-excerpt.webp";
 import abcexcerpt from "../assets/projects/abc-excerpt.webp";
 import book2excerpt from "../assets/projects/book2-excerpt.webp";
