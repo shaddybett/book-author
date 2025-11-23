@@ -4,7 +4,7 @@ import book4 from "../assets/projects/vows.webp";
 import book1 from "../assets/projects/itikadi.webp";
 import abc from "../assets/projects/abc.webp";
 import book2 from "../assets/projects/kiswahili.webp";
-import book1excerpt from "../assets/projects/book1-excerpt.webp";
+import book1excerpt from "../assets/projects/book2-excerpt.jpeg";
 import abcexcerpt from "../assets/projects/abc-excerpt.webp";
 import book2excerpt from "../assets/projects/book2-excerpt.webp";
 
