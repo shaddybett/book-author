@@ -1,12 +1,12 @@
 import book3 from "../assets/projects/author-s.webp";
 import book4 from "../assets/projects/vows.webp";
 // Children's books
-import book1 from "../assets/projects/itikadi.png";
-import abc from "../assets/projects/abc.png";
-import book2 from "../assets/projects/kiswahili.jpeg";
-import book1excerpt from "../assets/projects/book1-excerpt.png";
-import abcexcerpt from "../assets/projects/abc-excerpt.png";
-import book2excerpt from "../assets/projects/book2-excerpt.png";
+import book1 from "../assets/projects/itikadi.webp";
+import abc from "../assets/projects/abc1.webp";
+import book2 from "../assets/projects/kiswahili.webp";
+import book1excerpt from "../assets/projects/book1-excerpt.webp";
+import abcexcerpt from "../assets/projects/abc-excerpt.webp";
+import book2excerpt from "../assets/projects/book2-excerpt.webp";
 
 export const HERO_CONTENT = `From the hills of Kenya to the heart of Canada, I write stories of transformation, resilience, and the courage it takes to rebuild your life in unfamiliar places. Through memoir and inspirational writing, I illuminate the journey of finding home within yourself, even when everything familiar disappears.`;
 
