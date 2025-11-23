@@ -2,7 +2,7 @@ import book3 from "../assets/projects/author-s.webp";
 import book4 from "../assets/projects/vows.webp";
 // Children's books
 import book1 from "../assets/projects/itikadi.webp";
-import abc from "../assets/projects/abc1.webp";
+import abc from "../assets/projects/abc.webp";
 import book2 from "../assets/projects/kiswahili.webp";
 import book1excerpt from "../assets/projects/book1-excerpt.webp";
 import abcexcerpt from "../assets/projects/abc-excerpt.webp";
@@ -68,7 +68,7 @@ export const BOOKS = [
     publishedYear: "2024",
     rating: 4.8,
     pages: 125,
-    awards: ["Marriage & Relationships Bestseller", "Inspirational Read"],
+    // awards: ["Marriage & Relationships Bestseller", "Inspirational Read"],
     excerpt:
       "Those who know me personally might be wondering: 'What does she know about marriage? Only ten years into it, and she's just 32!' Well, I understand ten years may not be a lifetime, but it is long enough to see patterns, to experience highs and lows, and to learn lessons that can't be taught in theory...",
   },
@@ -85,10 +85,10 @@ export const BOOKS = [
     publishedYear: "2023",
     rating: 4.8,
     pages: 30,
-    awards: [
-      "Best Children's Faith Book Nominee 2024",
-      "Readers' Choice Inspirational Book"
-    ],
+    // awards: [
+    //   "Best Children's Faith Book Nominee 2024",
+    //   "Readers' Choice Inspirational Book"
+    // ],
     excerptImage: abcexcerpt,
   },
   {
@@ -104,10 +104,10 @@ export const BOOKS = [
     publishedYear: "2024",
     rating: 4.9,
     pages: 64,
-    awards: [
-      "Best Children's Educational Book Nominee 2024",
-      "Readers' Choice Favorite Language Book"
-    ],
+    // awards: [
+    //   "Best Children's Educational Book Nominee 2024",
+    //   "Readers' Choice Favorite Language Book"
+    // ],
     excerptImage: book2excerpt,
   },
   {
@@ -123,10 +123,10 @@ export const BOOKS = [
     publishedYear: "2023",
     rating: 4.8,
     pages: 45,
-    awards: [
-      "Best Children's Educational Book Nominee 2024",
-      "Readers' Choice Favorite Language Book"
-    ],
+    // awards: [
+    //   "Best Children's Educational Book Nominee 2024",
+    //   "Readers' Choice Favorite Language Book"
+    // ],
     excerptImage: book1excerpt,
   }
 ];
