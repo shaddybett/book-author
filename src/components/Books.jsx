@@ -256,8 +256,8 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
                 {book.description}
               </p>
               
-              {/* Excerpt toggle */}
-              {book.excerpt && (
+              {/* Excerpt toggle - Text or Image */}
+              {(book.excerpt || book.excerptImage) && (
                 <div>
                   <button
                     onClick={() => setShowExcerpt(!showExcerpt)}
@@ -265,7 +265,11 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
                              flex items-center gap-2 transition-colors duration-200"
                   >
                     <FiBookOpen className="w-4 h-4" />
-                    {showExcerpt ? 'Hide' : 'Read'} Excerpt
+                    {showExcerpt 
+                      ? 'Hide' 
+                      : book.excerptImage 
+                        ? 'View' 
+                        : 'Read'} {book.excerptImage ? 'Sample' : 'Excerpt'}
                   </button>
                   
                   <AnimatePresence>
@@ -277,9 +281,24 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
                         transition={{ duration: 0.3 }}
                         className="mt-4 pt-4 border-t border-stone-700/30"
                       >
-                        <p className="text-stone-400 italic text-sm leading-relaxed">
-                          "{book.excerpt}"
-                        </p>
+                        {/* Text Excerpt */}
+                        {book.excerpt && (
+                          <p className="text-stone-400 italic text-sm leading-relaxed">
+                            "{book.excerpt}"
+                          </p>
+                        )}
+                        
+                        {/* Image Excerpt */}
+                        {book.excerptImage && (
+                          <div className="mt-4">
+                            <img
+                              src={book.excerptImage}
+                              alt={`${book.title} sample pages`}
+                              className="w-full h-auto rounded-lg shadow-lg border border-stone-700/40
+                                       max-w-2xl mx-auto object-contain"
+                            />
+                          </div>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -360,21 +379,27 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
               Chat on WhatsApp
             </motion.button>
             
-            <motion.button
-              onClick={() => setShowExcerpt(!showExcerpt)}
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="border-2 border-stone-400 hover:border-white
-                       text-stone-300 hover:text-white
-                       px-6 py-3 rounded-full font-semibold
-                       transition-colors duration-200 flex items-center gap-2"
-            >
-              <FiBookOpen className="w-4 h-4" />
-              {showExcerpt ? 'Hide' : 'Read'} Sample
-            </motion.button>
+            {(book.excerpt || book.excerptImage) && (
+              <motion.button
+                onClick={() => setShowExcerpt(!showExcerpt)}
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="border-2 border-stone-400 hover:border-white
+                         text-stone-300 hover:text-white
+                         px-6 py-3 rounded-full font-semibold
+                         transition-colors duration-200 flex items-center gap-2"
+              >
+                <FiBookOpen className="w-4 h-4" />
+                {showExcerpt 
+                  ? 'Hide' 
+                  : book.excerptImage 
+                    ? 'View' 
+                    : 'Read'} {book.excerptImage ? 'Sample' : 'Excerpt'}
+              </motion.button>
+            )}
           </div>
         </motion.div>
       </div>

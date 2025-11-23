@@ -76,8 +76,8 @@ export const BOOKS = [
     title: "Kiswahili Lugha Yetu",
     image: book2,
     description:
-      "Kiswahili Lugha Yetu is a bright and engaging beginner’s guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
-    genre: "Children’s Educational / Language Learning",
+      "Kiswahili Lugha Yetu is a bright and engaging beginner's guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
+    genre: "Children's Educational / Language Learning",
     price: "1500",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
@@ -87,15 +87,16 @@ export const BOOKS = [
     pages: 64,
     awards: [
       "Best Children's Educational Book Nominee 2024",
-      "Readers’ Choice Favorite Language Book"
+      "Readers' Choice Favorite Language Book"
     ],
+    excerptImage: book2excerpt,
   },
     {
     title: "ABC Bible",
     image: abc,
     description:
-      "ABC Bible takes little readers on a joyful journey through God’s Word—from A for Abraham to Z for Zion. Each letter introduces a simple, meaningful Bible verse that helps children learn the alphabet while discovering God’s love. Ideal for bedtime reading, Sunday school, or family devotion time, this book plants seeds of faith that will grow throughout a child’s life. 30 pages.",
-    genre: "Children’s Educational / Faith-Based",
+      "ABC Bible takes little readers on a joyful journey through God's Word—from A for Abraham to Z for Zion. Each letter introduces a simple, meaningful Bible verse that helps children learn the alphabet while discovering God's love. Ideal for bedtime reading, Sunday school, or family devotion time, this book plants seeds of faith that will grow throughout a child's life. 30 pages.",
+    genre: "Children's Educational / Faith-Based",
     price: "1500",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
@@ -105,15 +106,16 @@ export const BOOKS = [
     pages: 30,
     awards: [
       "Best Children's Faith Book Nominee 2024",
-      "Readers’ Choice Inspirational Book"
+      "Readers' Choice Inspirational Book"
     ],
+    excerptImage: abcexcerpt,
   },
   {
     title: "Itikadi za Kiswahili",
     image: book1,
     description:
       "Itikadi za Kiswahili welcomes young learners into a vibrant world of color, creativity, and discovery. Inside, children explore everyday greetings, bright colors, fun numbers, fascinating facts about the human body, and exciting wild animals. With simple language and joyful illustrations, this book makes learning Swahili both fun and meaningful. Perfect for toddlers, preschoolers, and beginners learning Swahili as a second language. 45 pages.",
-    genre: "Children’s Educational / Language Learning",
+    genre: "Children's Educational / Language Learning",
     price: "1500",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
@@ -123,8 +125,9 @@ export const BOOKS = [
     pages: 45,
     awards: [
       "Best Children's Educational Book Nominee 2024",
-      "Readers’ Choice Favorite Language Book"
+      "Readers' Choice Favorite Language Book"
     ],
+    excerptImage: book1excerpt,
   }
 ];
 
