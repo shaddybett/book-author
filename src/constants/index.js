@@ -44,14 +44,14 @@ export const BOOKS = [
     description:
       "A deeply personal and inspiring memoir taking readers on a transformative journey from the hills of Kenya to the cold streets of Canada. With raw honesty and quiet strength, Mercy shares her story of immigration, culture shock, motherhood, and resilience. More than geographical relocation, it's about the emotional landscapes we traverse when we leave home in search of security, identity, and purpose.",
     genre: "Memoir & Biography",
-    price: "1500",
+    priceKES: "1500",
+    priceUSD: "20",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "B0FMSZDSM2",
     publishedYear: "2024",
     rating: 4.9,
     pages: 125,
-    awards: ["Immigrant Stories Collection", "Inspirational Memoir"],
     excerpt:
       "Moving across continents isn't just a change in geography, it is a leap into the unknown. It means leaving behind the familiar rhythms of home, the sights and sounds that ground you, and stepping into a world where everything feels slightly offbeat...",
   },
@@ -61,14 +61,14 @@ export const BOOKS = [
     description:
       "Is marriage really a scam? This powerful book takes readers on a heartfelt journey through the truth about love, commitment, and the realities that come after saying 'I do.' Blending real-life experiences with compelling stories, it opens the curtain on what truly happens when romance meets responsibility. Behind the Vows explores the beauty and battles of marriage, challenging myths and offering hope to anyone questioning whether true love still exists.",
     genre: "Relationships & Self-Help",
-    price: "1500",
+    priceKES: "1500",
+    priceUSD: "20",
     purchaseLink:
       "https://www.amazon.com/Behind-Vows-Marriage-Really-Scam/dp/B0EXAMPLE",
     isbn: "B0EXAMPLE",
     publishedYear: "2024",
     rating: 4.8,
     pages: 125,
-    // awards: ["Marriage & Relationships Bestseller", "Inspirational Read"],
     excerpt:
       "Those who know me personally might be wondering: 'What does she know about marriage? Only ten years into it, and she's just 32!' Well, I understand ten years may not be a lifetime, but it is long enough to see patterns, to experience highs and lows, and to learn lessons that can't be taught in theory...",
   },
@@ -78,17 +78,14 @@ export const BOOKS = [
     description:
       "ABC Bible takes little readers on a joyful journey through God's Word—from A for Abraham to Z for Zion. Each letter introduces a simple, meaningful Bible verse that helps children learn the alphabet while discovering God's love. Ideal for bedtime reading, Sunday school, or family devotion time, this book plants seeds of faith that will grow throughout a child's life. 30 pages.",
     genre: "Children's Educational / Faith-Based",
-    price: "1500",
+    priceKES: "1200",
+    priceUSD: "14.99",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567891",
     publishedYear: "2023",
     rating: 4.8,
     pages: 30,
-    // awards: [
-    //   "Best Children's Faith Book Nominee 2024",
-    //   "Readers' Choice Inspirational Book"
-    // ],
     excerptImage: abcexcerpt,
   },
   {
@@ -97,17 +94,14 @@ export const BOOKS = [
     description:
       "Kiswahili Lugha Yetu is a bright and engaging beginner's guide designed to help young learners discover the beauty of the Swahili language. Through colorful illustrations and simple, familiar words, children explore the alphabet, learn the names of fruits, vegetables, and everyday objects, and practice easy sentences that build confidence. This delightful book makes language learning fun, interactive, and inspiring — perfect for children, beginners, or anyone starting their Kiswahili journey.",
     genre: "Children's Educational / Language Learning",
-    price: "1500",
+    priceKES: "1200",
+    priceUSD: "14.99",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1-234567-891",
     publishedYear: "2024",
     rating: 4.9,
     pages: 35,
-    // awards: [
-    //   "Best Children's Educational Book Nominee 2024",
-    //   "Readers' Choice Favorite Language Book"
-    // ],
     excerptImage: book2excerpt,
   },
   {
@@ -116,17 +110,14 @@ export const BOOKS = [
     description:
       "Itikadi za Kiswahili welcomes young learners into a vibrant world of color, creativity, and discovery. Inside, children explore everyday greetings, bright colors, fun numbers, fascinating facts about the human body, and exciting wild animals. With simple language and joyful illustrations, this book makes learning Swahili both fun and meaningful. Perfect for toddlers, preschoolers, and beginners learning Swahili as a second language. 45 pages.",
     genre: "Children's Educational / Language Learning",
-    price: "1500",
+    priceKES: "1200",
+    priceUSD: "14.99",
     purchaseLink:
       "https://www.amazon.com/Navigating-Foreign-Land-Identity-Belonging/dp/B0FMSZDSM2",
     isbn: "978-1234567890",
     publishedYear: "2023",
     rating: 4.8,
     pages: 45,
-    // awards: [
-    //   "Best Children's Educational Book Nominee 2024",
-    //   "Readers' Choice Favorite Language Book"
-    // ],
     excerptImage: book1excerpt,
   }
 ];

@@ -279,17 +279,6 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
               {book.title}
             </h3>
             
-            {/* Awards */}
-            {book.awards && book.awards.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-4">
-                {book.awards.map((award, i) => (
-                  <span key={i} className="text-xs bg-yellow-500/10 text-yellow-400 
-                                         px-3 py-1 rounded-full border border-yellow-500/20">
-                    🏆 {award}
-                  </span>
-                ))}
-              </div>
-            )}
             
             <div className="bg-stone-800/30 backdrop-blur-sm border border-stone-700/30 
                           rounded-xl p-6 mb-6">
@@ -359,9 +348,16 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick })
                 <FiCalendar className="w-4 h-4" />
                 <span>{book.publishedYear}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="font-semibold">Ksh</span>
-                <span className="text-white font-semibold">{book.price}</span>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-stone-500 text-xs">KES</span>
+                  <span className="text-white font-semibold">{book.priceKES || book.price}</span>
+                </div>
+                <span className="text-stone-600">•</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-stone-500 text-xs">USD</span>
+                  <span className="text-white font-semibold">${book.priceUSD || book.price}</span>
+                </div>
               </div>
             </div>
 

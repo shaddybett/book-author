@@ -329,8 +329,9 @@ const Footer = () => {
               Mercy Langat
             </h3>
             <p className="text-stone-400 leading-relaxed mb-6">
-              Award-winning author passionate about crafting compelling narratives 
-              that transport readers to new worlds and touch their hearts.
+              Emerging author passionate about crafting compelling narratives 
+              that transport readers to new worlds and touch their hearts. 
+              With 5 published books and over 10,000 readers worldwide.
             </p>
             
             {/* Social links */}
