@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FaInstagram, FaFacebook } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
 import { motion, AnimatePresence } from "framer-motion"
-import logo from "../assets/M-1.png"
+import logo from "../assets/sb6.png"
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
