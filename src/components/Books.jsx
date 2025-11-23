@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { BOOKS } from '../constants/index';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiShoppingCart, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
+import { FiMessageCircle, FiStar, FiBookOpen, FiCalendar, FiDollarSign, FiAward, FiFilter } from 'react-icons/fi';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,7 +39,6 @@ const bookVariants = {
 };
 
 function Books() {
-  const navigate = useNavigate();
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [showExcerpt, setShowExcerpt] = useState({});
   
@@ -50,8 +48,15 @@ function Books() {
     ? BOOKS 
     : BOOKS.filter(book => book.genre === selectedGenre);
 
-  const handleOrderClick = (book) => {
-    navigate('/order-summary', { state: { book } });
+  // Temporary: Redirect to WhatsApp to build customer trust
+  // TODO: Switch back to payment page when ready (change handleWhatsAppClick to navigate to /order-summary)
+  const handleWhatsAppClick = (book) => {
+    const phoneNumber = '254713315219'; // Mercy Langat's WhatsApp
+    const message = encodeURIComponent(
+      `Hi Mercy! 👋\n\nI'm interested in purchasing:\n• "${book.title}"\n\nCould you please provide:\n• Availability\n• Price\n• Delivery options\n\nThank you!`
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -116,7 +121,7 @@ function Books() {
               index={index}
               showExcerpt={showExcerpt[book.isbn]}
               setShowExcerpt={(show) => setShowExcerpt(prev => ({...prev, [book.isbn]: show}))}
-              onOrderClick={() => handleOrderClick(book)}
+              onWhatsAppClick={() => handleWhatsAppClick(book)}
             />
           ))}
         </AnimatePresence>
@@ -136,7 +141,7 @@ function Books() {
   );
 }
 
-function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
+function BookCard({ book, index, showExcerpt, setShowExcerpt, onWhatsAppClick }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const renderStars = (rating) => {
@@ -208,15 +213,15 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
             <div className="absolute inset-0 z-20 flex items-center justify-center 
                           opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <motion.button
-                onClick={onOrderClick}
+                onClick={onWhatsAppClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white 
+                className="bg-green-500/90 hover:bg-green-500 text-white 
                          px-6 py-3 rounded-full transition-colors duration-200
                          shadow-lg hover:shadow-xl flex items-center gap-2 font-semibold"
               >
-                <FiShoppingCart className="w-5 h-5" />
-                <span>Order Now</span>
+                <FiMessageCircle className="w-5 h-5" />
+                <span>Chat on WhatsApp</span>
               </motion.button>
             </div>
           </div>
@@ -251,8 +256,8 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
                 {book.description}
               </p>
               
-              {/* Excerpt toggle */}
-              {book.excerpt && (
+              {/* Excerpt toggle - Text or Image */}
+              {(book.excerpt || book.excerptImage) && (
                 <div>
                   <button
                     onClick={() => setShowExcerpt(!showExcerpt)}
@@ -260,7 +265,11 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
                              flex items-center gap-2 transition-colors duration-200"
                   >
                     <FiBookOpen className="w-4 h-4" />
-                    {showExcerpt ? 'Hide' : 'Read'} Excerpt
+                    {showExcerpt 
+                      ? 'Hide' 
+                      : book.excerptImage 
+                        ? 'View' 
+                        : 'Read'} {book.excerptImage ? 'Sample' : 'Excerpt'}
                   </button>
                   
                   <AnimatePresence>
@@ -272,9 +281,24 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
                         transition={{ duration: 0.3 }}
                         className="mt-4 pt-4 border-t border-stone-700/30"
                       >
-                        <p className="text-stone-400 italic text-sm leading-relaxed">
-                          "{book.excerpt}"
-                        </p>
+                        {/* Text Excerpt */}
+                        {book.excerpt && (
+                          <p className="text-stone-400 italic text-sm leading-relaxed">
+                            "{book.excerpt}"
+                          </p>
+                        )}
+                        
+                        {/* Image Excerpt */}
+                        {book.excerptImage && (
+                          <div className="mt-4">
+                            <img
+                              src={book.excerptImage}
+                              alt={`${book.title} sample pages`}
+                              className="w-full h-auto rounded-lg shadow-lg border border-stone-700/40
+                                       max-w-2xl mx-auto object-contain"
+                            />
+                          </div>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -340,36 +364,42 @@ function BookCard({ book, index, showExcerpt, setShowExcerpt, onOrderClick }) {
           {/* Action Links */}
           <div className="flex flex-wrap gap-4 pt-2">
             <motion.button
-              onClick={onOrderClick}
+              onClick={onWhatsAppClick}
               whileHover={{ 
                 scale: 1.02,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
               whileTap={{ scale: 0.98 }}
-              className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white 
+              className="bg-green-500 hover:bg-green-600 text-white 
                        px-6 py-3 rounded-full font-semibold
                        transition-colors duration-200 flex items-center gap-2
                        shadow-lg"
             >
-              <FiShoppingCart className="w-4 h-4" />
-              Order Now
+              <FiMessageCircle className="w-4 h-4" />
+              Chat on WhatsApp
             </motion.button>
             
-            <motion.button
-              onClick={() => setShowExcerpt(!showExcerpt)}
-              whileHover={{ 
-                scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="border-2 border-stone-400 hover:border-white
-                       text-stone-300 hover:text-white
-                       px-6 py-3 rounded-full font-semibold
-                       transition-colors duration-200 flex items-center gap-2"
-            >
-              <FiBookOpen className="w-4 h-4" />
-              {showExcerpt ? 'Hide' : 'Read'} Sample
-            </motion.button>
+            {(book.excerpt || book.excerptImage) && (
+              <motion.button
+                onClick={() => setShowExcerpt(!showExcerpt)}
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="border-2 border-stone-400 hover:border-white
+                         text-stone-300 hover:text-white
+                         px-6 py-3 rounded-full font-semibold
+                         transition-colors duration-200 flex items-center gap-2"
+              >
+                <FiBookOpen className="w-4 h-4" />
+                {showExcerpt 
+                  ? 'Hide' 
+                  : book.excerptImage 
+                    ? 'View' 
+                    : 'Read'} {book.excerptImage ? 'Sample' : 'Excerpt'}
+              </motion.button>
+            )}
           </div>
         </motion.div>
       </div>
