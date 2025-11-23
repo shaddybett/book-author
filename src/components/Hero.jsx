@@ -2,7 +2,7 @@ import React from 'react'
 import authorPic from "../assets/prof1.webp"
 import { HERO_CONTENT } from '../constants/index'
 import { motion } from "framer-motion"
-import { FiBookOpen, FiAward, FiUsers } from 'react-icons/fi'
+import { FiBookOpen, FiUsers } from 'react-icons/fi'
 
 const containerVariants = {
   hidden: {
@@ -75,9 +75,8 @@ const statsVariants = {
 
 function Hero() {
   const stats = [
-    { icon: FiBookOpen, value: "5+", label: "Published Books" },
-    { icon: FiAward, value: "3+", label: "Literary Awards" },
-    { icon: FiUsers, value: "50K+", label: "Readers Worldwide" }
+    { icon: FiBookOpen, value: "5", label: "Published Books" },
+    { icon: FiUsers, value: "10K+", label: "Readers Worldwide" }
   ]
 
   return (
@@ -98,7 +97,7 @@ function Hero() {
               
               <motion.img
                 src={authorPic}
-                alt='Mercy Langat - Award-Winning Author'
+                alt='Mercy Langat - Emerging Author'
                 className='relative border-2 border-stone-700/50 rounded-3xl 
                         w-72 h-72 
                         sm:w-96 sm:h-96 
@@ -110,23 +109,6 @@ function Hero() {
                   transition: { duration: 0.3 }
                 }}
               />
-              
-              {/* Floating badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-                className="absolute -bottom-4 -right-4 bg-gradient-to-br from-white to-stone-200
-                         px-4 py-3 rounded-xl shadow-2xl border border-stone-300"
-              >
-                <div className="flex items-center gap-2">
-                  <FiAward className="text-yellow-600 text-lg" />
-                  <div>
-                    <p className="text-stone-800 font-bold text-sm">Award Winner</p>
-                    <p className="text-stone-600 text-xs">2023</p>
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -164,7 +146,7 @@ function Hero() {
                       bg-clip-text text-2xl sm:text-3xl lg:text-4xl 
                       tracking-tight text-transparent font-semibold'
             >
-              Award-Winning Author
+              Emerging Author
             </motion.span>
             
             <motion.p
@@ -179,7 +161,7 @@ function Hero() {
             {/* Stats */}
             <motion.div
               variants={statsVariants}
-              className="grid grid-cols-3 gap-4 w-full max-w-xl my-6"
+              className="grid grid-cols-2 gap-4 w-full max-w-xl my-6"
             >
               {stats.map((stat, index) => (
                 <motion.div
