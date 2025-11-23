@@ -50,7 +50,7 @@ export const BOOKS = [
     isbn: "B0FMSZDSM2",
     publishedYear: "2024",
     rating: 4.9,
-    pages: 256,
+    pages: 125,
     awards: ["Immigrant Stories Collection", "Inspirational Memoir"],
     excerpt:
       "Moving across continents isn't just a change in geography, it is a leap into the unknown. It means leaving behind the familiar rhythms of home, the sights and sounds that ground you, and stepping into a world where everything feels slightly offbeat...",
@@ -103,7 +103,7 @@ export const BOOKS = [
     isbn: "978-1-234567-891",
     publishedYear: "2024",
     rating: 4.9,
-    pages: 64,
+    pages: 35,
     // awards: [
     //   "Best Children's Educational Book Nominee 2024",
     //   "Readers' Choice Favorite Language Book"
