@@ -2,6 +2,8 @@
 
 A modern, elegant portfolio website for book authors built with React, Vite, Tailwind CSS, and integrated with Paystack for seamless book purchases.
 
+![Homepage Screenshot](./src/screenshots/homepage.png)
+
 ## ✨ Features
 
 - 📚 **Beautiful Book Showcase**: Display your published works with elegant cards and animations
